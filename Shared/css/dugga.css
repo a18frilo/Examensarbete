@@ -1,0 +1,784 @@
+/*p{font-family: Calibri,sans-serif;font-size:0.95em; color: #000; line-height: 1.3em; }
+h1{font-family: Calibri,sans-serif;font-size:1.8em; color: #000;}
+h2{font-family: Calibri,sans-serif;font-size:1.5em; color: #000;}
+h3{font-family: Calibri,sans-serif;font-size:1.3em; color: #000;}
+h4{font-family: Calibri,sans-serif;font-size:1.2em; color: #000;}
+*/
+/* --------------================################================-------------- *
+ *                                   Media Queries                                   *
+ * --------------================################================-------------- */
+
+ /*Meduim screens */
+@media screen and (max-width: 960px) {
+    #Nameof {
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+    }
+
+}
+
+
+#Nameof {
+  margin: 5px 0px 0px 0px;
+  padding: 5px;
+}
+
+#hoverRes {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  padding: 5px;
+  left: 0;
+  border: 2px solid grey;
+}
+
+#toggleGrade {
+	display: none;
+	background:#bbb;
+	width: 20%;
+	left: 40%; 
+	top:  20%;
+	border: 2px solid var(--color-border);
+}
+
+#gradeBtn {
+	background-color:var(--color-accent);
+	border: none;
+	position: fixed;
+	height: 56px;
+	width: 56px;
+	border-radius: 50%;
+  bottom: 30px;
+  right: 30px;
+	z-index: 1;
+ touch-action: none;
+}
+
+#copyClipboard {
+	float: left; 
+	padding: 2px; 
+	background-color: #afaeae;
+}
+#copyClipboard:hover{
+	cursor: pointer;
+	background-color:#868585;
+}
+
+
+
+h1{color: #000;}
+
+strong {font-weight: bold;}
+
+.outertd{
+	/*font-family:calibri;*/
+	padding:4px;
+	font-size:20px;
+}
+
+.outer{
+	border-collapse: collapse;
+}
+
+.noll {
+	text-align:center;
+	vertical-align:middle;
+	background:#523;
+	color:#fff;
+	box-shadow:2px 2px 3px #646;
+	padding:4px;
+	border-radius:6px;
+	cursor:pointer;
+}
+
+.ett {
+	text-align:center;
+	vertical-align:middle;
+	background:#c9a;
+	color:#000;
+	box-shadow:2px 2px 3px #646;
+	padding:4px;
+	border-radius:6px;
+	cursor:pointer;
+}
+
+.hexo {
+	text-align:center;
+	vertical-align:middle;
+	background:#c9a;
+	color:#000;
+	box-shadow:2px 2px 3px #646;
+	padding:4px;
+	border-radius:6px;
+	cursor:pointer;
+}
+
+.hexbutt {
+	text-align:center;
+	vertical-align:middle;
+	background:#b89;
+	color:#000;
+	box-shadow:2px 2px 3px #646;
+	padding:4px;
+	border-radius:6px;
+	cursor:pointer;
+}
+
+.popover {
+	margin: 2px;
+	position: relative;
+	box-sizing: border-box;
+	width: 400px;
+	padding: 8px;
+	background-color:#523;
+	/* border: 2px outset #000; */
+	background: linear-gradient(to bottom, #fff 10px, #fde 90%);
+	border-radius:8px;
+}
+
+.popover, .popover:before {
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.popover:before,
+.popover:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border: 2px outset #000;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.popover:before {
+	z-index: -1;
+}
+
+
+.popover.arrow-top:before,
+.popover.arrow-top:after {
+	bottom: 100%;
+	left: 10px;
+	margin-bottom: -7px;
+	border-bottom: 0;
+	border-right: 0;
+	background: #fff;
+}
+
+.popover.arrow-topr:before,
+.popover.arrow-topr:after {
+	bottom: 100%;
+	right: 10px;
+	margin-bottom: -7px;
+	border-bottom: 0;
+	border-right: 0;
+	background: #fff;
+}
+
+#emailPopup {
+	margin-top: 15px;
+	float: none;
+}
+
+#emailPopup #email {
+	margin-left: 10px;
+	width: 280px;
+	float: none;
+}
+
+/* --------------================################================-------------- *
+ *                        Instructions for dugga 1 and 2                        *
+ * --------------================################================-------------- */
+
+.feedback-container,.instructions-container{
+	width:100%;
+	margin-bottom:25px;
+}
+
+.instructions-content {
+	-webkit-columns: 2 200px;
+	-moz-columns: 2 200px;
+	columns: 2 200px;
+	-webkit-column-gap: 40px;
+	-moz-column-gap: 40px;
+	column-gap: 40px;
+	padding:15px;
+	border:1px solid #ccc;
+}
+.feedback-content{
+	padding:1px;
+	border:1px solid #ccc;	
+  }
+
+.instructions-content p:first-child {
+	margin: 0;
+}
+
+.feedback-button,.instructions-button {
+	cursor: pointer;
+	background-color: #ccc;
+	width:100%;
+	display:inline-block;
+	position:relative;
+	padding:3px 10px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.feedback-button:after,.instructions-button:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 49%;
+	left: -webkit-calc(50% - 15px);
+	left: -moz-calc(50% - 15px);
+	left: calc(50% - 15px);
+	top:100%;
+	width:0%;
+	height:0%;
+	border-top: 10px solid #ccc;
+	border-right: 15px solid transparent;
+	border-bottom: 0px solid transparent;
+	border-left: 15px solid transparent;
+}
+
+.feedback-button:hover:after, .instructions-button:hover:after {
+	border-top: 10px solid #939393;
+	border-right: 15px solid transparent;
+	border-bottom: 0px solid transparent;
+	border-left: 15px solid transparent;
+}
+
+.feedback-button:hover, .instructions-button:hover {
+	background-color:#939393;
+}
+
+/* --------------================################================-------------- *
+ *                      	    Quizdugga				        *
+ * --------------================################================-------------- */
+
+.quiz-wrapper{
+	width:100%;
+	margin:auto;
+	background-color:#ccc;
+}
+
+.quiz-header{
+ 	background-color: #614875;
+	padding:15px;
+}
+
+.quiz-header h1{
+	color:#fff;
+}
+
+.quiz-question{
+	background-color:#614875;
+	padding:6px 15px 6px 15px;
+}
+
+.quiz-question h3{
+	color:#fff;
+}
+
+.quiz-answer{
+	padding:6px 15px 6px 15px;
+}
+
+
+.quiz-question-number {
+	height: 30px;
+	width: 30px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius:15px;
+	border-radius: 20px;
+	border:1px solid #fff;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 5px;
+}
+
+.submit{
+	background-color:#614875;
+	border:0px;
+	padding:10px;
+	margin:7px;
+    	color:#fff;
+    	cursor:pointer;
+    	font-size:14px;
+    	transition:1s background-color;
+    	border-radius:4px;
+
+}
+
+.submit:hover {
+    	background-color:#7B5A96;
+    	border-radius:4px;
+}
+
+/* Changes the color of the even rows in the background so that the magic "row heading" looks nice */
+#resultTable___tbl___mhv tbody tr:nth-child(even) {background-color:#ffffff;}
+
+/* Change odd rows on resulted bg colour */
+#resultTable___tbl___mhv tbody tr:nth-child(odd) {background-color:#ccc;}
+.selectedOp {background-color: #c6cdb8 !important;}
+svg text {
+	pointer-events: none;
+}
+
+#markMenuPlaceholderz {
+		background:#bbb;
+}
+
+/* --------------================################================-------------- *
+ *                      	    Preview table style     				        *
+ * --------------================################================-------------- */
+ #TestPrev {
+   overflow-x: auto;
+ }
+ .previewTable {
+	width: 100%;
+	white-space: nowrap;
+}
+.previewTable tr {
+		display: table-row;
+		vertical-align: inherit;
+}
+.previewTable th {
+	font-weight: bold;
+	text-align: center;
+	vertical-align: inherit;
+	padding-right: 30px;
+	padding-left: 10px;
+}
+.previewTable td {
+	padding-right: 30px;
+	padding-left: 10px;
+	width: 1px;
+}
+.previewTable td:last-child {
+	width: 100%;
+}
+.previewTable tr:nth-child(even){
+  background-color: #dad8db;
+}
+.previewTable a{
+	color: var(--color-text-label);
+}
+@media only screen and (max-width: 500px) {
+	.previewTable {
+		width: auto;
+		white-space: normal;
+	}
+	.previewTable td {
+		padding-right: 2px;
+		padding-left: 0px
+	}
+	.previewTable th {
+		padding-right: 2px;
+		padding-left: 0px
+	}
+}
+
+ /* --------------================################================-------------- *
+ *                      	       Daily - minutes  				       								 *
+ * --------------================################================-------------- */
+ .tsTable {
+  margin: 20px 50px 20px 50px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.tsTable td:first-of-type {
+  border-left: 1px solid #cdd0d6;
+}
+.tsTable td:last-of-type {
+  border-right: 1px solid #cdd0d6;
+}
+.tsTable td, .tsTable th {
+  border-bottom: 1px solid #cdd0d6;
+}
+.tsTable thead {
+  background: var(--color-primary);
+  color: white;
+}
+.tsTable th {
+  padding: 10px;
+}
+.tsTable tbody, .tsTable tfoot {
+  text-align: center;
+}
+.tsTable td {
+  padding: 5px 10px 5px 10px;
+}
+.tsTable select {
+  height: 30px;
+  padding: 3px 0px 3px 5px;
+  width: 150px;
+}
+.tsTable input {
+  padding: 5px;
+}
+.tsTable tfoot {
+  background: #F0F0F0;
+}
+.tsTable tfoot:hover {
+  background: #7B5A96;
+}
+.tsTable tfoot td {
+  padding: 0;
+}
+.tsCommentColumn {
+  min-width: 200px;
+  width: 500px;
+}
+.tsTableDeleteCell {
+  border-radius: 0px 5px 5x 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+}
+.tsTableDeleteCell:hover {
+  cursor: pointer;
+}
+.newRowButton {
+  display: block;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 8px;
+  cursor: pointer;
+  background: var(--color-primary);
+  color: white;
+}
+.newRowButton:hover{
+  background: #7B5A96;
+}
+.tsSubmit {
+  background: var(--color-primary);
+  color: white;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 2px solid #614875;
+  padding: 4px 8px 4px 8px;
+}
+.tsSubmit:hover {
+  background: #7B5A96;
+  color: white;
+  border: 2px solid #614875;
+}
+	#smallerViewportWrapper{
+		border-style: solid;
+		border-width: 1px;
+		border-top: none;
+	}
+	#smallerViewportForm{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-left: 10%;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #cdd0d6;
+		border-top: none;
+		width: 200px;
+		font-weight: 600;
+		height: 170px;
+	}
+	#smallerViewportHead{
+		width: 100%;
+		height: 39px;
+		background-color: #614875;
+	}
+	#smallerViewportLabel{
+		background: var(--color-primary);
+    color: white;
+		width: 200px;
+		text-align: center;
+	}
+	#smallerViewportSelect{
+		width: 100%;
+	}
+	.tsSmallInput {
+		width: 100%;
+		box-sizing: border-box;
+	}
+	#prevSub{
+		margin-top: 10px;
+	}
+
+
+ /* --------------================################================-------------- *
+ *                      	         HTML-CSS Dugga				       								   *
+ * --------------================################================-------------- */
+ #target-col{
+    max-width:400px;
+    min-width:350px;
+    vertical-align:top;
+    background-color:#FFF;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5),0 2px 10px 0 rgba(0,0,0,0.1);
+    overflow:scroll;
+}
+.dugga-col .loginBoxheader{
+    padding:5px;
+    padding-bottom:10px;
+    margin-top:0; 
+    color:#FFF;
+    overflow:hidden; 
+    text-align:center;
+}
+.dugga-col #target-window {
+    min-width:200px;
+    min-height:400px;
+    max-width:600px;
+    overflow:scroll;
+}
+#target-window img{
+    margin:5px; 
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3),0 2px 5px 0 rgba(0,0,0,0.1);
+}
+#input-col{
+    min-width:400px;
+    vertical-align:top; 
+    background-color:#FFF;
+    vertical-align:top; 
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5),0 2px 10px 0 rgba(0,0,0,0.1);
+    overflow:hidden;
+}
+#input-col-content{
+    position:absolute;
+    top:45px;left:15px;
+    right:15px;
+    bottom:100px;
+}
+#content-window{
+    resize: none;
+    display:block;
+	width:398px;
+	margin-left: -14px;
+    height:100%;
+	box-sizing:border-box;
+	border:1px solid #614875;
+}
+#input-col-URL {
+    position:absolute; 
+    bottom:1px; 
+    left:1px; 
+    right:1px; 
+    min-height:75px; 
+    margin: 15px;
+}
+#url-input{
+    border:1px solid black;
+    width:100%;
+    box-sizing:border-box;
+}
+#preview-col{
+    width:400px;
+    vertical-align:top; 
+    background-color:#FFF;
+    vertical-align:top; 
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5),0 2px 10px 0 rgba(0,0,0,0.1);
+    overflow:hidden;
+}
+#preview-col p{
+	text-align: left;
+	margin:10px;
+	color: #000;
+}
+#code-preview-label{
+    margin-top:0; 
+    color:#FFF;
+    overflow:hidden; 
+    text-align:center;
+}
+#code-preview-window-wrapper, 
+#url-preview-window-wrapper,
+#validation-content{
+    width:400px;
+    height:265px;
+}
+#preview-col #code-preview-window {
+    transform:scale(0.5); 
+    transform-origin:0 0; 
+    box-sizing:border-box; 
+    border:2px solid #614875;
+    overflow:hidden;
+    margin:1px; 
+    width:796px; 
+    min-height:530px; 
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3),0 2px 5px 0 rgba(0,0,0,0.1);
+}
+#url-preview-label{
+    margin-top:0; 
+    color:#FFF;
+    overflow:hidden; 
+    text-align:center;
+}
+#url-preview-window{
+    transform:scale(1); 
+    transform-origin:0 0; 
+    box-sizing:border-box;
+    overflow:hidden; 
+    width:400px; 
+	min-height:520px; 
+	border:1px solid #614875;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3),0 2px 5px 0 rgba(0,0,0,0.1);
+}
+#validation-col{
+    width:400px;
+    vertical-align:top;
+    display:none; 
+    background-color:#FFF;
+    vertical-align:top;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5),0 2px 10px 0 rgba(0,0,0,0.1);
+    overflow:hidden;
+}
+#validation-label{
+    padding:5px; 
+    padding-bottom:10px; 
+    margin-top:0; 
+    color:#FFF;
+    overflow:hidden; 
+    text-align:center;
+}
+#url-button{
+	display: inline-block;
+	background-color: var(--color-primary);
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	cursor: pointer;
+	margin: 8px 2px 4px 2px;
+	font-size: 14px;
+	transition: 0.1s background-color;
+	-webkit-appearance: none;
+	border-radius: 4px;
+	line-height: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-decoration: none;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+#url-button:hover {
+    background-color: var(--color-primary-hover);
+}
+ @media screen and (min-width:200px){
+	#htmlCssTable{
+		display: flex; 
+		flex-wrap: wrap; 
+		justify-content: center;
+	}
+	#target-col, #input-col, #preview-col, #validation-col{
+		margin: 5px;
+	}
+	#input-col{
+		width: 200px;
+	}
+ }
+
+  /* --------------================################================-------------- *
+ *                      	        Transform Dugga				       								   *
+ * --------------================################================-------------- */
+ #transformInfoBox {
+	min-width: 300px;
+	width: 300px;
+}
+@media only screen and (max-width: 1360px) {
+ #transformInfoBox {
+	 width: 100%;
+ }
+ #transformInfoBox .loginBoxheader {
+	 width: 100%;
+ }
+ .transformContainer {
+	 flex-wrap: wrap;
+ }
+}
+
+  /* --------------================################================-------------- *
+ *                      	     Clipping Masking Dugga				       							 *
+ * --------------================################================-------------- */
+ .clippingLayout{
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: center;
+}
+#toolbox, #drawingarea, #clippingInfoBox2{
+	height: 462px;
+}
+#opTableContainer{
+	height:390px;
+	background-color:#FFF; 
+	overflow-y:scroll;
+}
+#clippingInfoBox {
+	min-width:170px;
+	width:395px;
+	height: 459px;
+	margin:0 4px 0 4px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5),0 2px 10px 0 rgba(0,0,0,0.1);
+}
+#clippingInfoBox2 {
+	min-width:120px;
+	width:400px;
+	margin:0 4px 5px 4px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5),0 2px 10px 0 rgba(0,0,0,0.1);
+}
+#toolbox{
+	width:395px;
+	margin:0 4px 5px 4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5),0 2px 10px 0 rgba(0,0,0,0.1);
+}
+#drawingArea{
+	min-width:120px;
+	margin:0 4px 5px 4px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5),0 2px 10px 0 rgba(0,0,0,0.1);
+}
+#drawingArea #a{
+	background-color:#FFFFFF; 
+	display:block;
+	width: 395px;
+}
+ @media only screen and (max-width: 1360px) {
+	#clippingInfoBox {
+		width:100%;
+	}
+	.clippingContainer {
+		flex-wrap: wrap;
+	}
+}
+@media screen and (max-width: 394px){
+	#drawingArea #a{
+		width: 320px;
+	}
+	#clippingInfoBox2 {
+		width:320px;	
+	}
+	#toolbox{
+		width:320px;
+	}
+}
+
+  /* --------------================################================-------------- *
+ *                      	          Curve Dugga				       							       *
+ * --------------================################================-------------- */
+ #curveInfoBox {
+	max-width:300px;
+ }
+
+@media only screen and (max-width: 1360px) {
+	#curveInfoBox {
+		width: 100%;
+		max-width: 100%;
+	}
+	.curveContainer {
+		flex-wrap: wrap;
+	}
+}

@@ -1,0 +1,12 @@
+courses/
+!install/courses/
+sftp-config.json
+.DS_Store
+.idea
+vendor/
+*.iml
+Shared/database-secret.php
+Shared/database.php
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/

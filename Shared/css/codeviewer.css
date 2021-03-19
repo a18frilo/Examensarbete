@@ -1,0 +1,1011 @@
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('ubuntu-mono-webfont.eot');
+    src: url('ubuntu-mono-webfont.eot?iefix') format('eot'),
+        url('ubuntu-mono-webfont.woff') format('woff'),
+        url('ubuntu-mono-webfont.ttf') format('truetype'),
+        url('ubuntu-mono-webfont.svg#webfont') format('svg');
+}
+
+/* DOCUMENT CONTENT STYLE START */
+#docucontent h1 {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#docucontent span.codestyle {
+    color: grey;
+    font-family: 'Ubuntu Mono', Arial, Sans-Serif;
+    font-style: italic;
+}
+
+/* DOCUMENT CONTENT STYLE STOP */
+
+.tooltip{
+	color:white;
+}
+
+.errormsg{
+	color: red;
+}
+
+/* BOX STYLE START */
+.box h1 {
+    display: block;
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.box ol {
+    margin-left: 2em;
+}
+
+.box ul {
+    list-style-type: disc;
+    margin-left: 1.5em;
+}
+
+.box hr {
+    border: none;
+    border-top: 1px #CCCCCC solid;
+    height: 2px;
+    width: 100%;
+}
+
+.box span.codestyle {
+    color: #666;
+    font-family: 'Ubuntu Mono', Arial, Sans-Serif;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+/* Base-size for images in description boxes */
+.box img {
+    width: 70%;
+}
+
+/* BOX STYLE STOP */
+
+/* BOXMENU STYLING START */
+.buttomenu2 {
+    background-color: #5A5757;
+    position: absolute;
+    top: 0px;
+    width: calc(100%);
+    margin: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.buttomenu2 table td img {
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+
+.buttomenu2 select {
+    top: 0px;
+    bottom: 0px;
+    width: 150px;
+    margin: 0px;
+    padding: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-overflow: '';
+    text-indent: 1px;
+    outline: none;
+}
+
+/* Select-element for changing boxcontent*/
+.buttomenu2 .boxcontentselect {
+    top: 0px;
+    bottom: 0px;
+    width: 150px;
+    margin: 0px;
+    padding: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-overflow: '';
+    text-indent: 1px;
+    outline: none;
+}
+
+/* Select-element for picking a wordlist*/
+.buttomenu2 .wordlistselect {
+    top: 0px;
+    bottom: 0px;
+    width: 70px;
+    margin: 0px;
+    padding: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-overflow: '';
+    text-indent: 1px;
+    outline: none;
+}
+
+/* BOXMENU STYLING STOP */
+
+#buttomenu {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    height: 50px;
+    margin: 0px;
+    border-color: rgb(0, 0, 0) transparent;
+}
+
+/* PICK TEMPLATE START */
+/* Is possibly replaced with template css further down in document */
+#picktemplate {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: white;
+}
+
+#picktemplate h1 {
+    text-align: center;
+}
+
+#picktemplate img {
+    width: 140px;
+    height: 140px;
+}
+
+/* PICK TEMPLATE STOP */
+
+/* MENU BUTTONS START*/
+.mbutto {
+    text-align: center;
+    font-family: Verdana, Serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 4px;
+    height: 44px;
+}
+
+.mbutto:hover {
+    cursor: pointer;
+}
+
+/* MENU BUTTONS STOP */
+
+/* Example title in menu */
+.menutext {
+    overflow: hidden;
+    height: 46px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 12px;
+    font-family: Verdana, Serif;
+    font-size: 24px;
+    font-weight: normal;
+    padding: 4px;
+}
+
+/* Extra button spaces */
+.buttospacer {
+    width: 20px;
+}
+
+.codeborder {
+    position: sticky;
+    min-height: 100%;
+    bottom: 0px;
+    left:0px;
+    margin: 0px !important;
+	padding: 5px 0px 0px 0px !important;
+	background-color: #614875;
+    text-align: right;
+    line-height: 15px;
+	/* Width of .no and .impo */
+	width: 32px !important;
+}
+
+.codeborder .no {
+    color: #D8D8D8;
+    padding-left: 4px;
+    padding-right: 6px;
+    width: 22px;
+	background-color: #614875;
+	font-family: Hack,'Ubuntu Mono',"Andale Mono", AndaleMono, monospace;
+}
+
+.codeborder .impono {
+    color: white;
+    width: 22px;
+    background-color: #9569BD;
+    padding-left: 4px;
+    padding-right: 6px;
+	font-family: Hack,'Ubuntu Mono',"Andale Mono", AndaleMono, monospace;
+}
+
+/* DROPDOWN STARTS */
+.dropdown {
+    display: none;
+    position: fixed;
+    top: 50px;
+    z-index: 4000;
+    font-size: 14px;
+}
+
+.dropdownback {
+    padding-left: 8px;
+    background-color: #614875;
+    border-color: rgb(0, 0, 0) transparent;
+    color: white;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+/* Codedrop with code files */
+.codedrop {
+    right: 0px;
+    width: -moz-calc(20.0%);
+    width: -webkit-calc(20.0%);
+    height: -webkit-calc(40.0%);
+    height: -moz-calc(40.0%);
+    padding-left: 7px;
+    overflow: auto;
+    border-color: rgb(0, 0, 0) transparent;
+}
+
+/* General settings drop */
+/* Consider changing names */
+.docudrop {
+    right: 0px;
+    width: -moz-calc(25.0%);
+    width: -webkit-calc(25.0%);
+    height: -webkit-calc(65.0%);
+    height: -moz-calc(65.0%);
+    padding-left: 7px;
+    border-color: rgb(0, 0, 0) transparent;
+    min-width: 270px;
+}
+
+/* Different themes dropdown */
+.themedrop {
+    right: 0px;
+    width: -moz-calc(20.0%);
+    width: -webkit-calc(20.0%);
+    height: -webkit-calc(40.0%);
+    height: -moz-calc(40.0%);
+}
+
+/* Images for descriptions */
+.imgdrop {
+    right: 0px;
+    width: -moz-calc(30.0%);
+    width: -webkit-calc(30.0%);
+    height: -webkit-calc(45.0%);
+    height: -moz-calc(45.0%);
+    background: rgb(0, 0, 0) transparent;
+    padding: 5px;
+}
+
+.imgdrop img {
+    width: 20%;
+    padding: 5px;
+}
+
+.forwdrop {
+    right: 20px;
+    height: auto;
+    width: 200px;
+    cursor: default;
+    border-color: rgb(0, 0, 0) transparent;
+    background-color: #614875;
+}
+
+.backwdrop {
+    right: 20px;
+    height: auto;
+    width: 200px;
+    cursor: default;
+    border-color: rgb(0, 0, 0) transparent;
+    background-color: #614875;
+}
+
+.dropdownitem {
+    display: block;
+    font-size: 14px;
+    cursor: default;
+    padding-left: 5px;
+    border-bottom: solid 1px #2A120A;
+    color: white;
+    background: #614875;
+}
+
+.dropdownitem:hover {
+    background-color: #7D5CA0;
+}
+
+/* DROPDOWN STOP */
+
+
+/* TEXTWRAPPER START */
+
+.normtextwrapper{
+    /* Width of codeborder */
+    position: absolute;
+    top: 0px;
+    margin-left: 32px;
+    padding: 5px 0px 0px 5px;
+}
+
+.normtext {
+
+    line-height: 15px;
+}
+
+.normtextend {
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+
+    color: #000;
+    background-color: #F2F2F2;
+    white-space:nowrap;
+    font-family: Hack,'Ubuntu Mono',"Andale Mono", AndaleMono, monospace;
+    line-height: 15px;
+}
+
+.normtext:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.normtext .string {
+    color: #03b !important;
+}
+
+.normtext .html, .hi {
+	background-color: #9569BD;
+}
+
+.normtext .impword, .impword2 {
+  background-color: #F2F2F2;
+  color: #000;
+  border-bottom: 2px solid #9971AF; 
+}
+
+.normtext .imphi {
+  color: #fff;
+  background-color: #614875;
+  border: none;
+}
+
+.impo {
+    color: #000;
+    background-color: rgba(186, 96, 255, 0.09);
+    white-space:nowrap;
+    min-width: 660px;
+    line-height: 15px;
+	font-family: Hack,'Ubuntu Mono',"Andale Mono", AndaleMono, monospace;
+}
+
+.impo .string {
+    color: #03b !important;
+}
+
+.impo .html, .hi {
+	background-color: #9569BD;
+}
+
+.impo .no {
+    color: white;
+    background-color: #9569BD;
+}
+
+.impo .impword, .impword2 {
+  background-color: #F2F2F2;
+  color: #000;
+  border-bottom: 2px solid #9971AF; 
+  font-family: Hack,'Ubuntu Mono', "Andale Mono", AndaleMono, monospace;
+}
+
+.impo .imphi {
+  color: #fff;
+  background-color: #614875;
+  border: none;
+}
+
+.comment {
+    color: #50a750;
+	font-family: Hack,'Ubuntu Mono', "Andale Mono", AndaleMono, monospace;
+}
+
+/* TEXTWRAPPER STOP */
+
+/* COLOR FOR KEYWORDS */
+
+.keywordA {
+    color: #e90000;
+}
+
+.keywordB {
+    color: #0004ff;
+}
+
+.keywordC {
+    color: rgba(6, 129, 19, 1);
+}
+
+.keywordD {
+    color: rgba(231, 0, 255, 1);
+
+}
+
+
+#playlinkErrorMsg {
+    display: none;
+}
+
+/* TAB-MENU SETTINGS */
+.settingsTabMenu {
+    border-bottom: solid 2px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+.settingsTabMenu li {
+    display: inline;
+    cursor: default;
+    margin: 5px;
+    padding: 5px 5px 0px 5px;
+    border-style: solid;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.settingsTabMenu .activeSetMenuLink {
+    border-bottom-width: 3px;
+}
+
+/* TAB-MENU STOP */
+
+/*Prevent new lines to enter (which creates screen-errors) when editing names in lists*/
+.norm > [contenteditable="true"] br,
+.butt > [contenteditable="true"] br {
+    display: none;
+}
+
+/* TEMPLATE ICON START */
+/* Icons for picking templates */
+.templateicon {
+    width: 45%;
+    margin: 0px;
+    float: left;
+}
+
+.templatethumbicon {
+    width: 88%;
+    margin: 2% 1% 2% 1%;
+    padding: 3%;
+}
+
+.templatethumbicon:hover {
+    cursor: pointer;
+}
+
+/* TEMPLATE ICON STOP */
+
+/* THEME ICON START */
+/* Icons for picking themes */
+.themeicon {
+    height: 20px;
+    padding: 5px;
+}
+
+.themeicon:hover {
+    cursor: pointer;
+}
+
+.themeicon img {
+    vertical-align: text-bottom;
+}
+
+.themeicon span {
+    padding-left: 6px;
+    font-size: 16px;
+}
+
+.themeicon:hover {
+    background-color: black;
+}
+
+.mobilethemebutton {
+    display: none;
+}
+
+.subbutton span {
+    font-size: 12px;
+}
+
+/* THEME ICON STOP */
+
+.showdesktop {
+    display: table-cell;
+}
+
+.showmobile {
+    display: none;
+}
+
+/* START OF BOXES LAYOUT */
+
+.box{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow: auto;
+    font-size: 14px;
+    outline: 0 none;
+    background-color: #F2F2F2; 
+}
+
+.box iframe {
+    width:100%;
+    height: 99%;
+}
+
+.codebox {
+    padding: 0px !important;
+}
+
+/* DESCRIPTION BOX STYLE START */
+.descbox, .framebox{
+    padding-top: 4px;
+    padding-left: 4px;
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-color: #5A5757;
+    padding: 10px !important;
+}
+
+.descbox .impword {
+  background-color: #F2F2F2;
+  color: #000;
+  border-bottom: 2px solid #9971AF; 
+}
+
+.descbox code .impword {
+  background-color: #FFFFFF;
+  color: #000;
+  border-bottom: 2px solid #9971AF; 
+}
+
+.descbox .imphi {
+  color: #fff !important;
+  background-color: #614875 !important;
+  border: none !important;
+}
+
+/* BOXMENU STYLING START */
+
+.butto2:hover{
+    background-color: #938C8C;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.boxtitleEditable{
+	color: white;
+	cursor:text;
+    cursor:pointer;
+    font-family: Arial, Sans-Serif;
+    font-size: 18px;
+}
+.boxtitle{
+	font-family: Arial, Sans-Serif !important;
+	cursor:default !important;
+	color: white !important;
+}
+
+.editcontentbtn {
+    vertical-align: middle;
+    min-width: 32px;
+    height: 32px;
+    text-align: center;
+}
+
+.boxtitlewrap {
+    
+    font-size: 15px;
+    height: 32px;
+    vertical-align: middle;
+    padding: 0px 5px;
+    transition: all 0.15s linear;
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+}
+
+/* BOXMENU STYLING STOP */
+
+.playlinkErrorMsgStyle{
+	color: red;
+}
+
+.templatethumbicon:hover{
+    background-color: #7D5CA0;
+}
+
+.themeicon:hover {
+	background-color: #7D5CA0;
+}
+
+/* USER FEEDBACK BOX START  */
+.alert.success {
+    background-color: #DFF0D8;
+    border-color: #D6E9C6;
+    color: #3C763D;
+    width: 150px;
+}
+
+.alert.warning {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #8a6d3b;
+}
+
+.slide-down {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-width: 0;
+    height: 40px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 3000;
+}
+
+.alert strong,
+.alert p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.alert span {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    font-weight: bold;
+    cursor: default;
+}
+
+.alert {
+    border: 1px solid transparent;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+    position: relative;
+}
+
+/* USER FEEDBACK BOX STOP*/
+
+/* RESIZABLE UI START*/
+/* Resizable jQuery UI fix for absolute positioning east*/
+.ui-resizable-e {
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    cursor: ew-resize;
+}
+
+/* Resizable jQuery UI fix for absolute positioning south*/
+.ui-resizable-s {
+    left: 0px;
+    bottom: 0px;
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    cursor: ns-resize;
+}
+
+/* RESIZABLE UI CSS STOP */
+
+/* DragnDrop CSS */
+
+#sortListBox {
+    margin: 5px;
+    width: 180px !important;
+    background-color: #cccccc;
+    text-align: center;
+}
+
+#sortListBox span {
+    color: #000;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#exampleListBox {
+    margin: 5px 5px 10px 5px;
+    width: 180px !important;
+    background-color: #cccccc;
+    text-align: center;
+}
+
+#exampleList {
+    max-height: 226px;
+    overflow-y: auto;
+}
+
+#sortList {
+    max-height: 226px;
+    overflow-y: auto;
+}
+
+#exampleListBox span {
+    color: #000;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#sortList div {
+    margin: 1px 2px 1px 2px;
+    padding: 5px;
+    background: #50a750;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: 1px solid #424242;
+    border-top: 1px solid #424242;
+    border-left: 1px solid #424242;
+    border-right: 1px solid #424242;
+    text-align: left;
+    cursor: pointer;
+}
+
+#exampleList div {
+    margin: 1px 2px 1px 2px;
+    padding: 5px;
+    background: #c75050;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: 1px solid #424242;
+    border-top: 1px solid #424242;
+    border-left: 1px solid #424242;
+    border-right: 1px solid #424242;
+    text-align: left;
+    cursor: pointer;
+}
+
+.empty {
+    margin: 5px;
+    padding: 10px;
+    background: #614875;
+    cursor: pointer;
+}
+
+#editExample td {
+    width: 50%;
+    padding: 5px 5px 0px 5px;
+    vertical-align: top;
+}
+
+#editExample input[type="text"] {
+    width: 100%;
+}
+
+#editExample fieldset {
+    border: 1px solid #999;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+
+#editExample legend {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+/* Shapes and color for the buttons in Editexample box*/
+.newSequence,
+.deleteSequence,
+.updateSequence {
+    background-color: rgb(97, 72, 117);
+    border: 0px none;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+    -webkit-transition: background-color 1s ease 0s;
+    -moz-transition: background-color 1s ease 0s;
+    -o-transition: background-color 1s ease 0s;
+    transition: background-color 1s ease 0s;
+
+}
+
+/* Shapes and color for the buttons in Editexample box*/
+.updateSequence {
+    margin-top: 5px;
+}
+
+/* Hover style for the buttons in Editexample box*/
+.newSequence:hover,
+.updateSequence:hover,
+.deleteSequence:hover {
+    background-color: #7B5A96;
+    border-radius: 4px;
+}
+
+#sequenceSelector {
+    width: 100%;
+}
+
+#status {
+    color: green;
+}
+
+#exchangeButton {
+    width: 30px;
+    vertical-align: top;
+    margin-top: 30px;
+    height: 30px;
+}
+
+.loginBox {
+    top: 25%;
+}
+
+.codeheader {
+    font-size: 26px !important;
+    color: white;
+}
+
+/* style for the maximize and reset button*/
+.maximizebtn, .minimizebtn, .resetbtn, .copybutton, .editbtn{
+    color: #DFF0D8;
+    width: 43px;
+    padding-right: 2px;
+    text-align: center;
+    font-size: 12px;
+    display: table-cell;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+
+/* style for the copy button and copy notification*/
+.copybutton {
+    right: 10px;
+}
+
+#copyBtn {
+    float:right;
+}
+
+.copybutton img {
+    height: 32px !important;
+}
+
+.copy-notification {
+    width: calc(100% - 17px);
+    height: calc(100% - 17px);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background-color: var(--color-accent-transparent);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    z-index: 1;
+}
+
+.copy-notification-icon {}
+
+.copy-notification img {
+    position: sticky;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30% !important;
+}
+
+#codeBurger {
+    display: none;
+}
+
+#mobileNavHeading {
+    display: none;
+}
+
+/* Classes for animating display:none */
+.hidden{
+    display:none;
+}
+
+.visuallyhidden{
+    opacity:0;
+    transform:scale(0.2);
+}
+
+@media only screen and (max-device-width : 725px) {
+    .hidden{
+        display:block;
+    }
+
+    .visuallyhidden{
+        opacity:100;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 364px) {
+        #mobileNavHeading {
+            font-size: 13px;
+    }
+}
+.blockBtnSlot {
+    min-width: 11px;
+    display: inline-block;
+    text-align: center;
+    line-height: 8px;
+    max-height: 11px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.blockBtnSlot.open-block::before {
+    content: '-';
+}
+
+.blockBtnSlot.closed-block::before {
+    content: '+';
+}
+
+.blockBtnSlot.occupied {
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.blockBtnSlot.occupied:hover {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.blockEllipses {
+    font-weight: bold;
+}

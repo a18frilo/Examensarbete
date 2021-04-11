@@ -585,10 +585,10 @@ function saveDuggaResult(citstr)
 			else{ //Check if deadline has past
 
 				if(comment == "UNK" || comment == "undefined" || comment == "null"){
-					document.getElementById('receiptInfo').innerHTML = "<p style='margin:15px 5px;'>Teckensträngen är ditt kvitto på att duggan har lämnats in. Spara kvittot på en säker plats.</p><img style='width:40px;float:left;margin-right:10px;' title='Warning' src='../Shared/icons/warningTriangle.svg'/><p>OBS! Denna inlämning har gjorts efter att deadline har passerat. Läraren kommer att rätta duggan vid nästa ordinarie rättningstillfälle ELLER i mån av tid.</p>";
+					document.getElementById('receiptInfo').innerHTML = "<p style='margin:15px 5px;'>Teckensträngen är ditt kvitto på att duggan har lämnats in. Spara kvittot på en säker plats.</p><img style='width:40px;float:left;margin-right:10px;' title='Warning' src='../Shared/icons/warningTriangle.svg' alt='Lorem ipsum'/><p>OBS! Denna inlämning har gjorts efter att deadline har passerat. Läraren kommer att rätta duggan vid nästa ordinarie rättningstillfälle ELLER i mån av tid.</p>";
 				}
 				else{
-					document.getElementById('receiptInfo').innerHTML = "<p>Teckensträngen är ditt kvitto på att duggan har lämnats in. Spara kvittot på en säker plats.</p><img style='width:40px;float:left;margin-right:10px;' title='Warning' src='../Shared/icons/warningTriangle.svg'/><p>"+comment+"</p>";
+					document.getElementById('receiptInfo').innerHTML = "<p>Teckensträngen är ditt kvitto på att duggan har lämnats in. Spara kvittot på en säker plats.</p><img style='width:40px;float:left;margin-right:10px;' title='Warning' src='../Shared/icons/warningTriangle.svg' alt='Lorem ipsum'/><p>"+comment+"</p>";
 				}
 
 			}
@@ -1437,14 +1437,14 @@ function findfilevers(filez,cfield,ctype,displaystate,group)
 								tab+="<td>";
 								// Button for making / viewing feedback - note - only button for given feedback to students.
 								if (ctype == "link"){
-										tab+="<a href='"+filez[i].content+"' ><img title='Download' src='../Shared/icons/file_download.svg' /></a>";
+										tab+="<a href='"+filez[i].content+"' ><img title='Download' src='../Shared/icons/file_download.svg' alt='Lorem ipsum'/></a>";
 								} else {
 										tab+="<a href='"+filelink+"' ><img title='Download' src='../Shared/icons/file_download.svg' /></a>";
 								}
 
 								// if type is pdf, add an extenral_open icon to open in new tab next to download icon.
 								if (ctype == "pdf") {
-									tab +="\t<tab><a href='"+filelink+"' target='_blank'><img title='Open in new tab' src='../Shared/icons/external_link_open.svg' /></a></tab>";
+									tab +="\t<tab><a href='"+filelink+"' target='_blank'><img title='Open in new tab' src='../Shared/icons/external_link_open.svg' alt='Lorem ipsum'/></a></tab>";
 								}
 								tab+="</td>";
 							}

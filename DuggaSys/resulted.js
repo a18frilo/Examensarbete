@@ -398,7 +398,7 @@ function clearFeedback() {
 }
 
 function makeImg(gradesys, cid, vers, moment, uid, mark, ukind, gfx, cls, qvariant, qid) {
-	return "<img src=\"" + gfx + "\" id=\"grade-" + moment + "-" + uid + "\" class=\"" + cls + "\" onclick=\"gradeDugga(event," + gradesys + "," + cid + ",'" + vers + "'," + moment + "," + uid + "," + mark + ",'" + ukind + "'," + qvariant + "," + qid + ");clearFeedback();\"  />";
+	return "<img src=\"" + gfx + "\" id=\"grade-" + moment + "-" + uid + "\" class=\"" + cls + "\" onclick=\"gradeDugga(event," + gradesys + "," + cid + ",'" + vers + "'," + moment + "," + uid + "," + mark + ",'" + ukind + "'," + qvariant + "," + qid + ");clearFeedback();\"  alt='Lorem ipsum'/>";
 }
 
 function makeSelect(gradesys, cid, vers, moment, uid, mark, ukind, qvariant, qid) {
@@ -979,7 +979,7 @@ function renderCell(col, celldata, cellid) {
 				} else {
 					str += makeSelect(celldata.gradeSystem, querystring['courseid'], celldata.vers, celldata.lid, celldata.uid, celldata.grade, 'U', celldata.qvariant, celldata.quizId);
 				}
-				str += "<img id='korf' class='fist";
+				str += "<img id='korf' alt='Lorem ipsum' class='fist";
 				if ((celldata.userAnswer === null && !(celldata.quizfile == "feedback_dugga")) || celldata.quizfile == null) { // Always shows fist. Should be re-evaluated
 					str += " grading-hidden";
 				}
@@ -1001,7 +1001,7 @@ function renderCell(col, celldata, cellid) {
 				for (var p = 0; p < moments.length; p++) {
 					if (moments[p].link == celldata.quizId) {
 						if (Date.parse(moments[p].deadline) < Date.parse(celldata.submitted)) {
-							str += "<img src='../Shared/icons/warningTriangle.svg' style='width:12px;height:12px;' title='Late submission'>";
+							str += "<img src='../Shared/icons/warningTriangle.svg' style='width:12px;height:12px;' title='Late submission' alt='Lorem ipsum'>";
 						}
 						break;
 					}
@@ -1016,7 +1016,7 @@ function renderCell(col, celldata, cellid) {
 				} else {
 					str += makeSelect(celldata.gradeSystem, querystring['courseid'], celldata.vers, celldata.lid, celldata.uid, celldata.grade, 'U', celldata.qvariant, celldata.quizId);
 				}
-				str += "<img id='korf' class='fist";
+				str += "<img id='korf' alt='Lorem ipsum' class='fist";
 				if ((celldata.userAnswer === null && !(celldata.quizfile == "feedback_dugga")) || celldata.quizfile == null) { // Always shows fist. Should be re-evaluated
 					str += " grading-hidden";
 				}
@@ -1049,7 +1049,7 @@ function renderCell(col, celldata, cellid) {
 				for (var p = 0; p < moments.length; p++) {
 					if (moments[p].link == celldata.quizId) {
 						if (Date.parse(moments[p].deadline) < Date.parse(celldata.submitted)) {
-							str += "<img src='../Shared/icons/warningTriangle.svg' style='width:12px;height:12px;' title='Late submission'>";
+							str += "<img src='../Shared/icons/warningTriangle.svg' style='width:12px;height:12px;' title='Late submission' alt='Lorem ipsum'>";
 						}
 						break;
 					}
@@ -1083,7 +1083,7 @@ function renderCell(col, celldata, cellid) {
 				} else {
 					str += makeSelect(celldata.gradeSystem, querystring['courseid'], celldata.vers, celldata.lid, celldata.uid, celldata.grade, 'U', celldata.qvariant, celldata.quizId);
 				}
-				str += "<img id='korf' class='fist";
+				str += "<img id='korf' alt='Lorem ipsum' class='fist";
 				if ((celldata.userAnswer === null && !(celldata.quizfile == "feedback_dugga")) || celldata.quizfile == null) { // Always shows fist. Should be re-evaluated
 					str += " grading-hidden";
 				}
@@ -1105,7 +1105,7 @@ function renderCell(col, celldata, cellid) {
 				for (var p = 0; p < moments.length; p++) {
 					if (moments[p].link == celldata.quizId) {
 						if (Date.parse(moments[p].deadline) < Date.parse(celldata.submitted)) {
-							str += "<img src='../Shared/icons/warningTriangle.svg' style='width:12px;height:12px;' title='Late submission'>";
+							str += "<img src='../Shared/icons/warningTriangle.svg' style='width:12px;height:12px;' title='Late submission' alt='Lorem ipsum'>";
 						}
 						break;
 					}
@@ -1138,7 +1138,7 @@ function renderCell(col, celldata, cellid) {
 				} else {
 					str += makeSelect(celldata.gradeSystem, querystring['courseid'], celldata.vers, celldata.lid, celldata.uid, celldata.grade, 'U', celldata.qvariant, celldata.quizId);
 				}
-				str += "<img id='korf' class='fist";
+				str += "<img id='korf' alt='Lorem ipsum' class='fist";
 				if ((celldata.userAnswer === null && !(celldata.quizfile == "feedback_dugga")) || celldata.quizfile == null) { // Always shows fist. Should be re-evaluated
 					str += " grading-hidden";
 				}
@@ -1171,7 +1171,7 @@ function renderCell(col, celldata, cellid) {
 				for (var p = 0; p < moments.length; p++) {
 					if (moments[p].link == celldata.quizId) {
 						if (Date.parse(moments[p].deadline) < Date.parse(celldata.submitted)) {
-							str += "<img src='../Shared/icons/warningTriangle.svg' style='width:12px;height:12px;' title='Late submission'>";
+							str += "<img src='../Shared/icons/warningTriangle.svg' style='width:12px;height:12px;' title='Late submission' alt='Lorem ipsum'>";
 						}
 						break;
 					}
@@ -1193,7 +1193,7 @@ function renderCell(col, celldata, cellid) {
 				} else {
 					str += makeSelect(celldata.gradeSystem, querystring['courseid'], celldata.vers, celldata.lid, celldata.uid, celldata.grade, 'U', celldata.qvariant, celldata.quizId);
 				}
-				str += "<img id='korf' class='fist";
+				str += "<img id='korf' alt='Lorem ipsum' class='fist";
 				if ((celldata.userAnswer === null && !(celldata.quizfile == "feedback_dugga")) || celldata.quizfile == null) { // Always shows fist. Should be re-evaluated
 					str += " grading-hidden";
 				}
@@ -1231,7 +1231,7 @@ function renderCell(col, celldata, cellid) {
 			for (var p = 0; p < moments.length; p++) {
 				if (moments[p].link == celldata.quizId) {
 					if (Date.parse(moments[p].deadline) < Date.parse(celldata.submitted)) {
-						str += "<img src='../Shared/icons/warningTriangle.svg' style='width:12px;height:12px;' title='Late submission'>";
+						str += "<img src='../Shared/icons/warningTriangle.svg' style='width:12px;height:12px;' title='Late submission' alt='Lorem ipsum'>";
 					}
 					break;
 				}
@@ -1489,13 +1489,13 @@ function renderSortOptions(col, status, colname) {
 				if (status == 0) {
 					document.getElementById("sortdirAsc").checked = true;
 
-					str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[0] + "\"); myTable.toggleSortStatus(\"" + col + "\",1)'>" + colnameArr[0] + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg'/></span>/";
+					str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[0] + "\"); myTable.toggleSortStatus(\"" + col + "\",1)'>" + colnameArr[0] + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg' alt='Lorem ipsum'/></span>/";
 					str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[1] + "\"); myTable.toggleSortStatus(\"" + col + "\",2)'>" + colnameArr[1] + "</span>";
 					// str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[2] + "\"); myTable.toggleSortStatus(\"" + col + "\",4)'>" + colnameArr[2] + "</span>";
 				} else {
 					document.getElementById("sortdirDes").checked = true;
 
-					str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[0] + "\"); myTable.toggleSortStatus(\"" + col + "\",0)'>" + colnameArr[0] + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg'/></span>/";
+					str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[0] + "\"); myTable.toggleSortStatus(\"" + col + "\",0)'>" + colnameArr[0] + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg' alt='Lorem ipsum'/></span>/";
 					str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[1] + "\"); myTable.toggleSortStatus(\"" + col + "\",2)'>" + colnameArr[1] + "</span>";
 					// str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[2] + "\"); myTable.toggleSortStatus(\"" + col + "\",4)'>" + colnameArr[2] + "</span>";
 				}
@@ -1508,14 +1508,14 @@ function renderSortOptions(col, status, colname) {
 					document.getElementById("sortdirAsc").checked = true;
 
 					str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[0] + "\"); myTable.toggleSortStatus(\"" + col + "\",0)'>" + colnameArr[0] + "</span>/";
-					str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[1] + "\"); myTable.toggleSortStatus(\"" + col + "\",3)'>" + colnameArr[1] + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg'/></span>";
+					str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[1] + "\"); myTable.toggleSortStatus(\"" + col + "\",3)'>" + colnameArr[1] + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg' alt='Lorem ipsum'/></span>";
 					// str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[2] + "\"); myTable.toggleSortStatus(\"" + col + "\",4)'>" + colnameArr[2] + "</span>";
 				} else {
 					document.getElementById("sortdirDes").checked = true;
 
 
 					str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[0] + "\"); myTable.toggleSortStatus(\"" + col + "\",0)'>" + colnameArr[0] + "</span>/";
-					str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[1] + "\"); myTable.toggleSortStatus(\"" + col + "\",2)'>" + colnameArr[1] + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg'/></span>";
+					str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[1] + "\"); myTable.toggleSortStatus(\"" + col + "\",2)'>" + colnameArr[1] + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg' alt='Lorem ipsum'/></span>";
 					// str += "<span onclick='myTable.setNameColumn(\"" + colnameArr[2] + "\"); myTable.toggleSortStatus(\"" + col + "\",4)'>" + colnameArr[2] + "</span>";
 				}
 				str += "</div>"

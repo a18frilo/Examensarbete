@@ -89,7 +89,7 @@ function returnedDugga(data)
 			}
 		} else {
 			var msg = "<div class='loginTransparent' id='lockedDuggaInfo' style='margin-bottom:5px;'>";
-			msg+="<img src='../Shared/icons/duggaLock.svg'>";
+			msg+="<img src='../Shared/icons/duggaLock.svg' alt='Lorem ipsum'>";
 			if (document.getElementById("loginbutton").className==="loggedin"){
 				msg+="<p>Not registered to the course!<br>You can view the assignment but you need to be registered to the course to save your dugga result.</p>";
 			} else {
@@ -261,7 +261,7 @@ function createFileUploadArea(fileuploadfileds){
 				form +="<input type='hidden' name='kind' value='3' />";
 		}else{
 				form +="<input name='uploadedfile[]' type='file' id='inputfile" + l + "' class='inputfile' multiple='multiple' onchange='this.form.submit();'/>";
-                form +="<label for='inputfile" + l + "'><img src='../Shared/icons/file-upload-icon.png' width='15px' height='15px' style='padding-left:5px; padding-right: 5px;'/> Choose files&#160;&#160;</label>&#160;&#160;";
+                form +="<label for='inputfile" + l + "'><img src='../Shared/icons/file-upload-icon.png' width='15px' height='15px' style='padding-left:5px; padding-right: 5px;' alt='Lorem ipsum'/> Choose files&#160;&#160;</label>&#160;&#160;";
 				form +="<input type='hidden' name='kind' value='1' />";
 		}
 

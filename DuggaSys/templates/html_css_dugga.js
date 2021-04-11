@@ -252,7 +252,7 @@ function showFacit(param, uanswer, danswer, userStats, files, moment, feedback)
 
 
 
-			$( "#MarkCont" ).append( '<img id="facit-target-window-img" class="facitPreview" src="'+document.getElementById("target-window-img").src+'" onmouseenter="togglePopover();" onclick="togglePreview();"/>' );
+			$( "#MarkCont" ).append( '<img id="facit-target-window-img" class="facitPreview" src="'+document.getElementById("target-window-img").src+'" onmouseenter="togglePopover();" onclick="togglePreview();" alt="Lorem ipsum"/>' );
 
 
 	}

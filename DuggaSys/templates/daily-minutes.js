@@ -82,7 +82,7 @@ function newRow() {
 	str += "</select></td>";
 	str += "<td><input id='tsRef_"+lastRowIdx+"' required type='number' name='tsRef_"+lastRowIdx+"' style='width: 55px' /></td>";
 	str += "<td class='tsCommentColumn'><input id='tsComment_"+lastRowIdx+"' required type='text' name='tsComment_"+lastRowIdx+"' style='width: 90%' /></td>";
-	str += "<td class='tsTableDeleteCell' onclick='deleteRow("+lastRowIdx+")'><img src='../Shared/icons/Trashcan.svg'></td>";
+	str += "<td class='tsTableDeleteCell' onclick='deleteRow("+lastRowIdx+")'><img src='../Shared/icons/Trashcan.svg' alt='Lorem ipsum' alt='Lorem ipsum'></td>";
 
 	tsTableBody.innerHTML = str;
 }
@@ -163,7 +163,7 @@ function returnedDugga(data)
 			}
 		} else {
 			var msg = "<div class='loginTransparent' id='lockedDuggaInfo' style='margin-bottom:5px;'>";
-			msg+="<img src='../Shared/icons/duggaLock.svg'>";
+			msg+="<img src='../Shared/icons/duggaLock.svg' alt='Lorem ipsum'>";
 			if (document.getElementById("loginbutton").className==="loggedin"){
 				msg+="<p>Not registered to the course!<br>You can view the assignment but you need to be registered to the course to save your dugga result.</p>";
 			} else {

@@ -811,7 +811,7 @@ function returnedSection(data) {
 
         } else if (itemKind === 3) {
           if (item['highscoremode'] != 0 && itemKind == 3) {
-            str += "<td style='width:20px;'><img style=';' title='Highscore' src='../Shared/icons/top10.png' onclick='showHighscore(\"" + item['link'] + "\",\"" + item['lid'] + "\")'/></td>";
+            str += "<td style='width:20px;'><img style=';' title='Highscore' src='../Shared/icons/top10.png' onclick='showHighscore(\"" + item['link'] + "\",\"" + item['lid'] + "\")' alt='Lorem ipsum'/></td>";
           }
           str += "<td class='example item" + hideState + "' placeholder='" + momentexists + "' id='I" + item['lid'] + "' ";
           kk++;
@@ -847,12 +847,12 @@ function returnedSection(data) {
             }
           }
 
-          str += "<td style='width:32px;' onclick='getGroups(\"" + grp + "\");'><img src='../Shared/icons/group-iconDrk.svg' style='display:block;margin-right:4.5px;max-width:32px;max-height:32px;overflow:hidden;'></td>";
+          str += "<td style='width:32px;' onclick='getGroups(\"" + grp + "\");'><img src='../Shared/icons/group-iconDrk.svg' style='display:block;margin-right:4.5px;max-width:32px;max-height:32px;overflow:hidden;' alt='Lorem ipsum'></td>";
           str += "<td class='section-message item' onclick='getGroups(\"" + grp + "\");' placeholder='" + momentexists + "' id='I" + item['lid'] + "' ";
 
         } else if (itemKind === 7) { //Message
           if (!(item['link'] == "" || item['link'] == "---===######===---")) {
-            str += "<td style='width:32px;'><img title='Important message' src='../Shared/icons/warningTriangle.svg'></td>";
+            str += "<td style='width:32px;'><img title='Important message' src='../Shared/icons/warningTriangle.svg' alt='Lorem ipsum'></td>";
           }
           str += "<td class='section-message item' placeholder='" + momentexists + "' id='I" + item['lid'] + "' ";
         }
@@ -867,15 +867,15 @@ function returnedSection(data) {
           // Section
           str += "<div class='nowrap" + hideState + "' style='margin-left:8px;display:flex;align-items:center;' title='" + item['entryname'] + "'>";
           str += "<span class='ellipsis listentries-span'>" + item['entryname'] + "</span>";
-          str += "<img src='../Shared/icons/desc_complement.svg' id='arrowComp" + item['lid'] + "' class='arrowComp' style='display:inline-block;'>";
-          str += "<img src='../Shared/icons/right_complement.svg' id='arrowRight" + item['lid'] + "' class='arrowRight' style='display:none;'></div>";
+          str += "<img src='../Shared/icons/desc_complement.svg' id='arrowComp" + item['lid'] + "' class='arrowComp' style='display:inline-block;' alt='Lorem ipsum'>";
+          str += "<img src='../Shared/icons/right_complement.svg' id='arrowRight" + item['lid'] + "' class='arrowRight' style='display:none;' alt='Lorem ipsum'></div>";
         } else if (itemKind == 4) {
           // Moment
           var strz = makeTextArray(item['gradesys'], ["", "(U-G-VG)", "(U-G)"]);
           str += "<div class='nowrap" + hideState + "' style='margin-left:8px;display:flex;align-items:center;' title='" + item['entryname'] + "'>";
           str += "<span class='ellipsis listentries-span'>" + item['entryname'] + " " + strz + " </span>";
-          str += "<img src='../Shared/icons/desc_complement.svg' id='arrowComp" + item['lid'] + "' class='arrowComp' style='display:inline-block;'>";
-          str += "<img src='../Shared/icons/right_complement.svg'" + "id='arrowRight" + item['lid'] + "' class='arrowRight' style='display:none;'>";
+          str += "<img src='../Shared/icons/desc_complement.svg' id='arrowComp" + item['lid'] + "' class='arrowComp' style='display:inline-block;' alt='Lorem ipsum'>";
+          str += "<img src='../Shared/icons/right_complement.svg'" + "id='arrowRight" + item['lid'] + "' class='arrowRight' style='display:none;' alt='Lorem ipsum'>";
           str += "</div>";
         } else if (itemKind == 2) {
           // Code Example
@@ -965,7 +965,7 @@ function returnedSection(data) {
           // create a warning if the dugga is submitted after the set deadline and withing the grace time period if one exists
           if ((status === "pending") && (dateTimeSubmitted > deadline)) {
             if (hasGracetimeExpired(deadline, dateTimeSubmitted)) {
-              str += "<td style='width:25px;'><img style='width:25px; padding-top:3px' title='This dugga is not guaranteed to be marked due to submission after deadline.' src='../Shared/icons/warningTriangle.svg'/></td>";
+              str += "<td style='width:25px;'><img style='width:25px; padding-top:3px' title='This dugga is not guaranteed to be marked due to submission after deadline.' src='../Shared/icons/warningTriangle.svg' alt='Lorem ipsum'/></td>";
             }
           }
         }
@@ -973,7 +973,7 @@ function returnedSection(data) {
         // Userfeedback
         if (data['writeaccess'] && itemKind === 3 && item['feedbackenabled'] == 1) {
           str += "<td style='width:32px;'>";
-          str += "<img id='dorf' src='../Shared/icons/FistV.svg' title='Feedback' onclick='showUserFeedBack(\"" + item['lid']  + "\",\"" + item['feedbackquestion']  + "\");'>";
+          str += "<img id='dorf' src='../Shared/icons/FistV.svg' title='Feedback' onclick='showUserFeedBack(\"" + item['lid']  + "\",\"" + item['feedbackquestion']  + "\");' alt='Lorem ipsum'>";
           str += "</td>";
         }
 
@@ -985,7 +985,7 @@ function returnedSection(data) {
           if (itemKind === 1) str += "class='section" + hideState + "' ";
           if (itemKind === 4) str += "class='moment" + hideState + "' ";
 
-          str += "><img id='dorf' title='Settings' class='' src='../Shared/icons/Cogwheel.svg' ";
+          str += "><img id='dorf' title='Settings' class='' src='../Shared/icons/Cogwheel.svg' alt='Lorem ipsum' ";
           str += " onclick='selectItem(" + makeparams([item['lid'], item['entryname'], item['kind'], item['visible'], item['link'], momentexists, item['gradesys'], item['highscoremode'], item['comments'], item['grptype'], item['deadline'], item['tabs'], item['feedbackenabled'], item['feedbackquestion']]) + ");' />";
           str += "</td>";
         }
@@ -993,7 +993,7 @@ function returnedSection(data) {
         // trashcan
         if (data['writeaccess'] || data['studentteacher']) {
           str += "<td style='width:32px;' class='" + makeTextArray(itemKind, ["header", "section", "code", "test", "moment", "link", "group", "message"]) + " " + hideState + "'>";
-          str += "<img id='dorf' title='Delete item' class='' src='../Shared/icons/Trashcan.svg' onclick='confirmBox(\"openConfirmBox\", this);'>";
+          str += "<img id='dorf' title='Delete item' class='' src='../Shared/icons/Trashcan.svg' onclick='confirmBox(\"openConfirmBox\", this);' alt='Lorem ipsum'>";
           str += "</td>";
         }
 
@@ -2152,7 +2152,7 @@ function toggleFeedbacks(){
           $(".feedbackContent").html(duggaFeedback);
           if ($(".recentFeedbacks").length == 0) {
              $(".feedbackContent").append("<p class='noFeedbacks'><span>There are no recent feedbacks to view.</span><span class='viewOldFeedbacks' onclick='viewOldFeedbacks();'>View old feedbacks</span></p>");
-             $(".feedbackHeader").append("<span onclick='viewOldFeedbacks(); hideIconButton();' id='iconButton'><img src='../Shared/icons/oldFeedback.svg' title='Old feedbacks'></span>");
+             $(".feedbackHeader").append("<span onclick='viewOldFeedbacks(); hideIconButton();' id='iconButton'><img src='../Shared/icons/oldFeedback.svg' title='Old feedbacks' alt='Lorem ipsum'></span>");
           }
           $(".oldFeedbacks").hide();                  
           feedbackComment = 'feedbackComment';

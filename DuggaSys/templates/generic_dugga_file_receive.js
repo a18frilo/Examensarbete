@@ -91,7 +91,7 @@ function returnedDugga(data)
 			}
 		} else {
 			var msg = "<div class='loginTransparent' id='lockedDuggaInfo' style='margin-bottom:5px;'>";
-			msg+="<img src='../Shared/icons/duggaLock.svg'>";
+			msg+="<img src='../Shared/icons/duggaLock.svg' alt='Lorem ipsum'>";
 			if (document.getElementById("loginbutton").className==="loggedin"){
 				msg+="<p>Not registered to the course!<br>You can view the assignment but you need to be registered to the course to save your dugga result.</p>";
 			} else {
@@ -276,16 +276,16 @@ function createFileUploadArea(fileuploadfileds){
 		}else if(type=="pdf"){
         // special type for pdf to have accept = .pdf
 				form +="<input name='uploadedfile[]' type='file' id='inputfile" + l + "' class='inputfile' accept='.pdf' multiple='multiple' onchange='this.form.submit();'/>";
-        form +="<label for='inputfile" + l + "'><img src='../Shared/icons/file-upload-icon.png' width='15px' height='15px' style='padding-left:5px; padding-right: 5px;'/> Choose files&#160;&#160;</label>&#160;&#160;";
+        form +="<label for='inputfile" + l + "'><img src='../Shared/icons/file-upload-icon.png' width='15px' height='15px' style='padding-left:5px; padding-right: 5px;' alt='Lorem ipsum'/> Choose files&#160;&#160;</label>&#160;&#160;";
 				form +="<input type='hidden' name='kind' value='1' />";
 		} else if(type == "zip"){
       // special type for zip to have accept = .zip and .rar
       form +="<input name='uploadedfile[]' type='file' id='inputfile" + l + "' class='inputfile' accept='.zip,.rar' multiple='multiple' onchange='this.form.submit();'/>";
-      form +="<label for='inputfile" + l + "'><img src='../Shared/icons/file-upload-icon.png' width='15px' height='15px' style='padding-left:5px; padding-right: 5px;'/> Choose files&#160;&#160;</label>&#160;&#160;";
+      form +="<label for='inputfile" + l + "'><img src='../Shared/icons/file-upload-icon.png' width='15px' height='15px' style='padding-left:5px; padding-right: 5px;' alt='Lorem ipsum'/> Choose files&#160;&#160;</label>&#160;&#160;";
       form +="<input type='hidden' name='kind' value='1' />";
     } else {
       form +="<input name='uploadedfile[]' type='file' id='inputfile" + l + "' class='inputfile' multiple='multiple' onchange='this.form.submit();'/>";
-      form +="<label for='inputfile" + l + "'><img src='../Shared/icons/file-upload-icon.png' width='15px' height='15px' style='padding-left:5px; padding-right: 5px;'/> Choose files&#160;&#160;</label>&#160;&#160;";
+      form +="<label for='inputfile" + l + "'><img src='../Shared/icons/file-upload-icon.png' width='15px' height='15px' style='padding-left:5px; padding-right: 5px;' alt='Lorem ipsum'/> Choose files&#160;&#160;</label>&#160;&#160;";
       form +="<input type='hidden' name='kind' value='1' />";
     }
 

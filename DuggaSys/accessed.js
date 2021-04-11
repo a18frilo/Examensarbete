@@ -515,10 +515,10 @@ function renderCell(col, celldata, cellid) {
 		var className = obj.class;
 		if (className == null || className === "null") {
 			className = "";
-			str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><div style='color:#808080'> None"+className+"</div><img class='sortingArrow' src='../Shared/icons/desc_black.svg'/>" + makedivItem(className, filez['classes'], "class", "class") + "</div>";
+			str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><div style='color:#808080'> None"+className+"</div><img class='sortingArrow' src='../Shared/icons/desc_black.svg' alt='Lorem ipsum'/>" + makedivItem(className, filez['classes'], "class", "class") + "</div>";
 		}
 		else{
-			str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><Div>"+className+"</Div><img class='sortingArrow' src='../Shared/icons/desc_black.svg'/>" + makedivItem(className, filez['classes'], "class", "class") + "</div>";
+			str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><Div>"+className+"</Div><img class='sortingArrow' src='../Shared/icons/desc_black.svg' alt='Lorem ipsum'/>" + makedivItem(className, filez['classes'], "class", "class") + "</div>";
 		}
 	} else if (col == "examiner") {
 		var examinerName = "";
@@ -529,10 +529,10 @@ function renderCell(col, celldata, cellid) {
 		}
 		if (obj.examiner == null || obj.examiner === "null" || obj.examiner < 0) {
 			examinerName = "";
-			str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><div style='color:#808080'> None</div><img class='sortingArrow' src='../Shared/icons/desc_black.svg'/>" + makedivItemWithValue(examinerName, filez['teachers'], "name", "uid") + "</div>";
+			str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><div style='color:#808080'> None</div><img class='sortingArrow' src='../Shared/icons/desc_black.svg' alt='Lorem ipsum'/>" + makedivItemWithValue(examinerName, filez['teachers'], "name", "uid") + "</div>";
 		}
 		else{
-			str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><Div '>"+examinerName+"</Div><img class='sortingArrow' src='../Shared/icons/desc_black.svg'/>" + makedivItemWithValue(examinerName, filez['teachers'], "name", "uid") + "</div>";
+			str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><Div '>"+examinerName+"</Div><img class='sortingArrow' src='../Shared/icons/desc_black.svg' alt='Lorem ipsum'/>" + makedivItemWithValue(examinerName, filez['teachers'], "name", "uid") + "</div>";
 		}
 	} else if (col == "vers") {
 		var versname = "";
@@ -543,15 +543,15 @@ function renderCell(col, celldata, cellid) {
 		}
 
 		if (obj.vers == null || obj.vers === "null") {
-			str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><div style='color:#808080'> None</div><img class='sortingArrow' src='../Shared/icons/desc_black.svg'/>" + makedivItem(versname, filez['courses'], "versname", "vers") + "</select>";
+			str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><div style='color:#808080'> None</div><img class='sortingArrow' src='../Shared/icons/desc_black.svg' alt='Lorem ipsum'/>" + makedivItem(versname, filez['courses'], "versname", "vers") + "</select>";
 		}
 
 		else{
-			str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><div>"+versname+"</div><img class='sortingArrow' src='../Shared/icons/desc_black.svg'/>" + makedivItem(versname, filez['courses'], "versname", "vers") + "</select>";
+			str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><div>"+versname+"</div><img class='sortingArrow' src='../Shared/icons/desc_black.svg' alt='Lorem ipsum'/>" + makedivItem(versname, filez['courses'], "versname", "vers") + "</select>";
 		}
 		for (var submission of filez['submissions']) {
             if (obj.uid === submission.uid) {
-                str += "<img class='oldSubmissionIcon' title='View old version' src='../Shared/icons/DocumentDark.svg' onclick='showVersion(" + submission.vers + ")'>";
+                str += "<img class='oldSubmissionIcon' title='View old version' src='../Shared/icons/DocumentDark.svg' onclick='showVersion(" + submission.vers + ")' alt='Lorem ipsum'>";
                 break;
             }
         };
@@ -565,7 +565,7 @@ function renderCell(col, celldata, cellid) {
 		else {
 			trueTeacher = "Student teacher";
 		}
-		str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><Div >"+trueTeacher+"</Div><img class='sortingArrow' src='../Shared/icons/desc_black.svg'/>" + makeDivItemStudent(obj.access, ["Teacher", "Student", "Student teacher"], ["W", "R", "ST"]) + "</select>";
+		str = "<div class='access-dropdown' id='" + col + "_" + obj.uid + "'><Div >"+trueTeacher+"</Div><img class='sortingArrow' src='../Shared/icons/desc_black.svg' alt='Lorem ipsum'/>" + makeDivItemStudent(obj.access, ["Teacher", "Student", "Student teacher"], ["W", "R", "ST"]) + "</select>";
 	} else if (col == "requestedpasswordchange") {
 		
 		if (parseFloat(obj.recent) < 1440) {
@@ -590,10 +590,10 @@ function renderCell(col, celldata, cellid) {
 		str = "<div class='multiselect-group'><div class='group-select-box' onclick='showCheckboxes(this)'>";
 		if(optstr.includes('None') || optstr == "" || optstr == null){
 			optstr = "";
-			str += "<div><div class='access-dropdown'><span style='color:#808080'>None</span><img class='sortingArrow' src='../Shared/icons/desc_black.svg'/></div></div><div class='overSelect'></div></div><div class='checkboxes' id='grp" + obj.uid + "' >";
+			str += "<div><div class='access-dropdown'><span style='color:#808080'>None</span><img class='sortingArrow' src='../Shared/icons/desc_black.svg' alt='Lorem ipsum'/></div></div><div class='overSelect'></div></div><div class='checkboxes' id='grp" + obj.uid + "' >";
 		}
 		else{
-			str += "<div><div class='access-dropdown'><span>" + optstr + "</span><img class='sortingArrow' src='../Shared/icons/desc_black.svg'/></div></div><div class='overSelect'></div></div><div class='checkboxes' id='grp" + obj.uid + "' >";
+			str += "<div><div class='access-dropdown'><span>" + optstr + "</span><img class='sortingArrow' src='../Shared/icons/desc_black.svg' alt='Lorem ipsum'/></div></div><div class='overSelect'></div></div><div class='checkboxes' id='grp" + obj.uid + "' >";
 		}
     str += "<label><input type='radio' name='groupradio"+obj.uid+"' checked id='g" + obj.uid + "' value='' />None</label>";
 		for (var i = 0; i < filez['groups'].length; i++) {
@@ -617,9 +617,9 @@ function renderSortOptions(col, status, colname) {
 	if (status == -1) {
 		str += "<span class='sortableHeading' onclick='myTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "</span>";
 	} else if (status == 0) {
-		str += "<span class='sortableHeading' onclick='myTable.toggleSortStatus(\"" + col + "\",1)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg'/></span>";
+		str += "<span class='sortableHeading' onclick='myTable.toggleSortStatus(\"" + col + "\",1)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg' alt='Lorem ipsum'/></span>";
 	} else {
-		str += "<span class='sortableHeading' onclick='myTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg'/></span>";
+		str += "<span class='sortableHeading' onclick='myTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg' alt='Lorem ipsum'/></span>";
 	}
 	addToSortDropdown(colname, col);
 	return str;
@@ -865,7 +865,7 @@ function updateAndCloseGroupDropdown(checkboxes){
 	// if user unpresses all checkboxes it the student will now belong to no group
 	else changeProperty(checkboxes.id.substr(3), "group", "None");
 
-	readStr += "</span><img class='sortingArrow' src='../Shared/icons/desc_black.svg'>";
+	readStr += "</span><img class='sortingArrow' src='../Shared/icons/desc_black.svg' alt='Lorem ipsum'>";
 	activeElement.children[0].children[0].innerHTML = readStr;
 
 	obj = {

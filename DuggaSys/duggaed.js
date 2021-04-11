@@ -27,10 +27,10 @@ function setup() {
     filt += `<form autocomplete='off' style='display:contents'><input id='duggaSearch' readonly style='margin-top:4px;' onmouseover = 'duggaSearchMouseOver()' type='text' name='search' placeholder='Search..'`;
 	filt += `onkeyup='searchterm=document.getElementById("duggaSearch").value;searchKeyUp(event);duggaTable.renderTable();'onsearch='searchterm=document.getElementById("duggaSearch").value; searchKeyUp(event); duggaTable.renderTable();document.getElementById("searchinputMobile").value=document.getElementById("duggaSearch").value;'/></form>`;
 	filt += `<button id='searchbutton' class='switchContent' onclick='return searchKeyUp(event);' type='button'>`
-    filt += `<img id='lookingGlassSVG' style='height:18px;margin-bottom:6px;' src='../Shared/icons/LookingGlass.svg'>`
+    filt += `<img id='lookingGlassSVG' style='height:18px;margin-bottom:6px;' src='../Shared/icons/LookingGlass.svg' alt='Lorem ipsum'>`
 	filt += `</button>`
 	filt += `</td>`
-    filt += `<img id='lookingGlassSVG' style='height:18px;margin-bottom:6px;' src='../Shared/icons/LookingGlass.svg'/>`;
+    filt += `<img id='lookingGlassSVG' style='height:18px;margin-bottom:6px;' src='../Shared/icons/LookingGlass.svg' alt='Lorem ipsum'/>`;
     filt += `</button></td>`;
     filt += `<script> function duggaSearchMouseOver() {var obj = document.getElementById("duggaSearch"); if(obj != null){obj.removeAttribute('readonly');}}</script>`;
 
@@ -723,19 +723,19 @@ function renderCell(col, celldata, cellid) {
 
 		case "arrow":		// DUGGA-TABLE - Arrow icon
 			clickedElement = JSON.parse(cellid.match(/\d+/));
-			retString = "<img id='dorf' class='markdownIcon' src='../Shared/icons/markdownPen.svg' title='Edit Variants'";
+			retString = "<img id='dorf' class='markdownIcon' src='../Shared/icons/markdownPen.svg' title='Edit Variants' alt='Lorem ipsum'";
 			retString += " onclick='renderVariant(\"" + clickedElement + "\"); showVariantEditor();'>";
 			break;
 
 		case "cogwheel":	// DUGGA-TABLE - Cogwheel icon
 			object = JSON.parse(celldata);
-			retString = "<img id='dorf' src='../Shared/icons/Cogwheel.svg' title='Edit Dugga'";
+			retString = "<img id='dorf' src='../Shared/icons/Cogwheel.svg' title='Edit Dugga' alt='Lorem ipsum'";
 			retString += " onclick='selectDugga(\"" + object + "\");' >";
 			break;
 
 		case "trashcan":	// DUGGA-TABLE - Trashcan icon
 			object = JSON.parse(celldata);
-			retString = "<img id='dorf' src='../Shared/icons/Trashcan.svg' title='Delete'";
+			retString = "<img id='dorf' src='../Shared/icons/Trashcan.svg' title='Delete' alt='Lorem ipsum'";
 			retString += " onclick='confirmBox(\"openConfirmBox\",\"" + object + "\",\"dugga\");' >";
 			break;
 
@@ -753,19 +753,19 @@ function renderCell(col, celldata, cellid) {
 
 		case "arrowVariant":	// VARIANT-TABLE - Arrow icon
 			object = JSON.parse(celldata);
-			retString = "<img id='dorf' src='../Shared/icons/PlayT.svg' ";
+			retString = "<img id='dorf' src='../Shared/icons/PlayT.svg' alt='Lorem ipsum' ";
 			retString += " onclick='getVariantPreview( " + object + ", " + clickedElement + ");'>";
 			break;
 
 		case "cogwheelVariant":	// VARIANT-TABLE - Cogwheel icon
 		object = JSON.parse(celldata);
-			retString = "<img id='dorf' src='../Shared/icons/Cogwheel.svg' ";
+			retString = "<img id='dorf' src='../Shared/icons/Cogwheel.svg' alt='Lorem ipsum' ";
 			retString += " onclick='selectVariant(" + object + ",this);' >";
 			break;
 
 		case "trashcanVariant":	// VARIANT-TABLE - Trashcan icon
 			object = JSON.parse(celldata);
-			retString = "<img id='dorf' src='../Shared/icons/Trashcan.svg' ";
+			retString = "<img id='dorf' src='../Shared/icons/Trashcan.svg' alt='Lorem ipsum' ";
 			retString += " onclick='confirmBox(\"openConfirmBox\",\"" + object + "\",\"variant\");' >";
 			break;
 
@@ -787,9 +787,9 @@ function renderSortOptionsDugga(col,status,colname) {
 			if (status ==- 1) {
 				str += "<span class='sortableHeading' onclick='duggaTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "</span>";
 			} else if (status == 0) {
-				str += "<span class='sortableHeading' onclick='duggaTable.toggleSortStatus(\"" + col + "\",1)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg'/></span>";
+				str += "<span class='sortableHeading' onclick='duggaTable.toggleSortStatus(\"" + col + "\",1)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg' alt='Lorem ipsum'/></span>";
 			} else {
-				str += "<span class='sortableHeading' onclick='duggaTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg'/></span>";
+				str += "<span class='sortableHeading' onclick='duggaTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg' alt='Lorem ipsum'/></span>";
 			}
 		}
 		*/
@@ -797,9 +797,9 @@ function renderSortOptionsDugga(col,status,colname) {
 			if (status ==- 1) {
 				str += "<span class='sortableHeading' onclick='duggaTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "</span>";
 			} else if (status == 0) {
-					str += "<span class='sortableHeading' onclick='duggaTable.toggleSortStatus(\"" + col + "\",1)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg'/></span>";
+					str += "<span class='sortableHeading' onclick='duggaTable.toggleSortStatus(\"" + col + "\",1)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg' alt='Lorem ipsum'/></span>";
 			} else {
-					str += "<span class='sortableHeading' onclick='duggaTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg'/></span>";
+					str += "<span class='sortableHeading' onclick='duggaTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg' alt='Lorem ipsum'/></span>";
 			}
 		}
 return str;
@@ -811,9 +811,9 @@ function renderSortOptionsVariant(col,status,colname) {
 	if (status ==- 1) {
 		str += "<span class='sortableHeading' onclick='variantTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "</span>";
 	} else if (status == 0) {
-		str += "<span class='sortableHeading' onclick='variantTable.toggleSortStatus(\"" + col + "\",1)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg'/></span>";
+		str += "<span class='sortableHeading' onclick='variantTable.toggleSortStatus(\"" + col + "\",1)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg' alt='Lorem ipsum'/></span>";
 	} else {
-		str += "<span class='sortableHeading' onclick='variantTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg'/></span>";
+		str += "<span class='sortableHeading' onclick='variantTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg' alt='Lorem ipsum'/></span>";
 	}
 	return str;
 }

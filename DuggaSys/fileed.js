@@ -331,7 +331,7 @@ function renderCell(col, celldata, cellid) {
 
     if (col == "trashcan") {
         if (obj.showtrashcan) {
-            str = "<span class='iconBox'><img id='dorf' title='Delete file' class='trashcanIcon' src='../Shared/icons/Trashcan.svg' ";
+            str = "<span class='iconBox'><img id='dorf' title='Delete file' class='trashcanIcon' src='../Shared/icons/Trashcan.svg' alt='Lorem ipsum' ";
             str += " onclick='deleteFile(\"" + obj.fileid + "\",\"" + obj.filename + "\",\"" + obj.filekind + "\");' ></span>";
         }
     } else if (col == "filename") {
@@ -351,10 +351,10 @@ function renderCell(col, celldata, cellid) {
     } else if (col == "editor") {
         if(obj.showeditor){
         if (obj.extension == "md" || obj.extension == "txt") {
-            str = "<span class='iconBox'><img id='dorf'  title='Edit file'  class='markdownIcon' src='../Shared/icons/markdownPen.svg' ";
+            str = "<span class='iconBox'><img id='dorf'  title='Edit file'  class='markdownIcon' src='../Shared/icons/markdownPen.svg' alt='Lorem ipsum' ";
             str += "onclick='loadPreview(\"" + obj.filePath + "\", \"" + obj.filename + "\", " + obj.kind + ")'></span>";
         } else if (obj.extension == "js" || obj.extension == "html" || obj.extension == "css" || obj.extension == "php") {
-            str = "<span class='iconBox'><img id='dorf'  title='Edit file'  class='markdownIcon' src='../Shared/icons/markdownPen.svg' ";
+            str = "<span class='iconBox'><img id='dorf'  title='Edit file'  class='markdownIcon' src='../Shared/icons/markdownPen.svg' alt='Lorem ipsum' ";
             str += "onclick='loadFile(\"" + obj.filePath + "\", \"" + obj.filename + "\", " + obj.kind + ")'></span>";
         }
     }
@@ -614,9 +614,9 @@ function renderSortOptions(col, status, colname) {
     if (status == -1) {
         str += "<span class='sortableHeading' onclick='myTable.toggleSortStatus(\"" + col + "\",0)'>" + colname + "</span>";
     } else if (status == 0) {
-        str += "<span class='sortableHeading' onclick='myTable.toggleSortStatus(\"" + col + "\",1); sortFiles(true);'>" + colname + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg'/></span>";
+        str += "<span class='sortableHeading' onclick='myTable.toggleSortStatus(\"" + col + "\",1); sortFiles(true);'>" + colname + "<img class='sortingArrow' src='../Shared/icons/desc_white.svg' alt='Lorem ipsum'/></span>";
     } else {
-        str += "<span class='sortableHeading' onclick='myTable.toggleSortStatus(\"" + col + "\",0); sortFiles(false);'>" + colname + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg'/></span>";
+        str += "<span class='sortableHeading' onclick='myTable.toggleSortStatus(\"" + col + "\",0); sortFiles(false);'>" + colname + "<img class='sortingArrow' src='../Shared/icons/asc_white.svg' alt='Lorem ipsum'/></span>";
     }
     return str;
 }

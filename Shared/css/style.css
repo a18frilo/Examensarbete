@@ -181,9 +181,7 @@ hr {
 }
 
 .hidden {
-  /* opacity: 0.7; */
-  /* border-radius:4px; */
-  color: #000 !important;
+  color: var(--color-text-list) !important;
   margin-left: 16px;
 }
 
@@ -1185,7 +1183,7 @@ p {
 }
 
 .statistics {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-primary-2);
   color: white;
   width: 36px;
   min-height: calc(100vh - 122px);

@@ -63,7 +63,7 @@ pdoConnect();
 			<li class="legendListItem"><img src="../Shared/icons/FistV.png"> Dugga stats</li>
 			<li class="legendListItem"><img src="../Shared/icons/warningTriangle.png"> Deadline passed</li>
 			<li class="legendListItem"><span> (9) </span><span> Grading changes</span></li>
-			<li class="legendListItem"><img src="../Shared/icons/not_announced_icon.svg"> Dugga not yet submitted</li>
+			<li class="legendListItem"><img src="../Shared/icons/not_announced_icon.svg" alt="Lorem ipsum"> Dugga not yet submitted</li>
 			<li class="legendListItem"><div class="dugga-moment"></div> Dugga moment</li>
 			<li class="legendListItem"><div class="dugga-pending-late-submission"></div> Dugga pending: Late submission</li>
 			<li class="legendListItem"><div class="dugga-pending"></div> Dugga pending: Submitted in time</li>

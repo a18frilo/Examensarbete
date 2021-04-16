@@ -457,35 +457,35 @@
                 <div class="diagram-sidebar-section">
                     <div class="diagram-sidebar-label">Tools</div>
                     <button id='attributebutton' onclick='setMode("CreateERAttr");' class='diagram-tools-button diagram-tools-button-big unpressed' data="Create Attribute (Shift + A)">
-                        <img src="../Shared/icons/diagram_create_attribute.svg">
+                        <img src="../Shared/icons/diagram_create_attribute.svg" alt="Lorem ipsum">
                     </button>
                     <button id='entitybutton' onclick='setMode("CreateEREntity");' class='diagram-tools-button diagram-tools-button-big unpressed' data="Create Entity (Shift + E)">
-                        <img src="../Shared/icons/diagram_create_entity.svg">
+                        <img src="../Shared/icons/diagram_create_entity.svg" alt="Lorem ipsum">
                     </button>
                     <button id='relationbutton' onclick='setMode("CreateERRelation");' class='diagram-tools-button diagram-tools-button-big unpressed' data="Create Relation (Shift + R)">
-                        <img src="../Shared/icons/diagram_create_relation.svg">
+                        <img src="../Shared/icons/diagram_create_relation.svg" alt="Lorem ipsum">
                     </button>
                     <button id='classbutton' onclick='setMode("CreateClass");' class='diagram-tools-button diagram-tools-button-big unpressed' data="Create Class (Shift + C)">
-                        <img src="../Shared/icons/diagram_create_class.svg">
+                        <img src="../Shared/icons/diagram_create_class.svg" alt="Lorem ipsum">
                     </button>
                     <button id='linebutton' onclick='setMode("CreateLine");' class='diagram-tools-button diagram-tools-button-big unpressed' data="Create Line (Shift + L)">
-                        <img src="../Shared/icons/diagram_create_line.svg">
+                        <img src="../Shared/icons/diagram_create_line.svg" alt="Lorem ipsum">
                     </button>
                     <button id='drawfreebutton' onclick="setMode('Free');" class='diagram-tools-button diagram-tools-button-big unpressed' data="Draw Free (Shift + F)">
-                        <img src="../Shared/icons/diagram_draw_free.svg">
+                        <img src="../Shared/icons/diagram_draw_free.svg" alt="Lorem ipsum">
                     </button>
                     <button id='drawtextbutton' onclick="setMode('Text');" class='diagram-tools-button diagram-tools-button-big unpressed' data="Draw Text (Shift + T)">
-                        <img class="invert-color" src="../Shared/icons/textbox.svg">
+                        <img class="invert-color" src="../Shared/icons/textbox.svg" alt="Lorem ipsum">
                     </button>
                 </div>
                 <div class="diagram-sidebar-section">
                     <div class="diagram-sidebar-label">Undo/Redo</div>
                     <div id="diagram-undo-redo-container">
                         <button id="undoButton" onclick="undoDiagram()" class="diagram-tools-button diagram-tools-button-small" data="Undo (Ctrl + Z)">
-                            <img class="invert-color" src="../Shared/icons/undo.svg">
+                            <img class="invert-color" src="../Shared/icons/undo.svg" alt="Lorem ipsum">
                         </button>
                         <button id="redoButton" onclick="redoDiagram()" class="diagram-tools-button diagram-tools-button-small" data="Redo (Ctrl + Y)">
-                            <img class="invert-color" src="../Shared/icons/redo.svg">
+                            <img class="invert-color" src="../Shared/icons/redo.svg" alt="Lorem ipsum">
                         </button>
                     </div>
                 </div>
@@ -507,7 +507,7 @@
             <div id="diagram-canvas-container">
                 <canvas id="diagram-canvas"></canvas>
                 <button id='moveButton' class='unpressed' title="Move Around">
-                    <img src="../Shared/icons/diagram_move_arrows.svg">
+                    <img src="../Shared/icons/diagram_move_arrows.svg" alt="Lorem ipsum">
                 </button> 
                 <div id="valuesCanvas"></div>
                 <div id="selectDiv">
@@ -529,23 +529,23 @@
             <div id="diagram-timeline-container">
                 <div class="diagram-timeline-controls" style="border-right:1px solid #000000;">
                     <button id="diagram-timeline-play-button" class="diagram-tools-button diagram-tools-button-small paused" onclick="playTimeline();">
-                        <img src="../Shared/icons/Play.svg">
+                        <img src="../Shared/icons/Play.svg" alt="Lorem ipsum">
                     </button>
                     <button id="diagram-timline-plus-button" class="diagram-tools-button diagram-tools-button-small closed" onclick="toggleTimelineControls();">
-                        <img src="../Shared/icons/Plus.svg">
+                        <img src="../Shared/icons/Plus.svg" alt="Lorem ipsum">
                     </button>
                     <div id="diagram-timeline-controls-toggleable" style="display:none;">
                         <button class="diagram-tools-button diagram-tools-button-small" onclick="undoDiagram();">
-                            <img src="../Shared/icons/SkipB.svg">
+                            <img src="../Shared/icons/SkipB.svg" alt="Lorem ipsum">
                         </button>
                         <button class="diagram-tools-button diagram-tools-button-small" onclick="redoDiagram();">
-                            <img src="../Shared/icons/SkipF.svg">
+                            <img src="../Shared/icons/SkipF.svg" alt="Lorem ipsum">
                         </button>
                         <button class="diagram-tools-button diagram-tools-button-small" onclick="resetTimeline();">
-                            <img src="../Shared/icons/ResetButton.svg">
+                            <img src="../Shared/icons/ResetButton.svg" alt="Lorem ipsum">
                         </button>
                         <button class="diagram-tools-button diagram-tools-button-small" onclick='toggleFullscreen();'>
-                            <img src="../Shared/icons/fullscreen.svg">
+                            <img src="../Shared/icons/fullscreen.svg" alt="Lorem ipsum">
                         </button>
                         <input type="range" id="diagram-timeline-speed-range" class="zoomSlider" min="0.1" max="3" value="1" step="0.1" oninput="playTimeline(true);">
                         <div id="diagram-timeline-speed"><b>Speed:</b> 1s</div>

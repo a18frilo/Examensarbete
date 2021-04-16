@@ -165,7 +165,7 @@ if($cid != "UNK") $_SESSION['courseid'] = $cid;
 					echo "<div class='err'><span style='font-weight:bold;'>Bummer!</span> The link you asked for does not currently exist!</div>";
 				}
         echo "<div class='loginTransparent' id='lockedDuggaInfo' style='margin-bottom:5px;'>";
-        echo "<img src='../Shared/icons/duggaLock.svg'>";
+        echo "<img src='../Shared/icons/duggaLock.svg' alt='Lorem ipsum'>";
         if ($userid!="UNK") {
           echo "<p>Not registered to the course!	You can view the assignment but you need to be registered to the course to save your dugga result.</p>";
         } else {

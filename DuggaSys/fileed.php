@@ -90,7 +90,7 @@ $js = array(
             <input id='searchinputMobile' type='text' name='search' placeholder='Search..' onkeyup='searchterm=document.getElementById("searchinputMobile").value;searchKeyUp(event);myTable.reRender();document.getElementById("searchinput").value=document.getElementById("searchinputMobile").value;'/>
 
             <button id='searchbuttonMobile' class='switchContent' onclick='searchterm=document.getElementById("searchinputMobile").value;searchKeyUp(event);myTable.reRender();' type='button'>
-                <img id='lookingGlassSVG' style='height:18px;' src='../Shared/icons/LookingGlass.svg'/>
+                <img id='lookingGlassSVG' style='height:18px;' src='../Shared/icons/LookingGlass.svg' alt='Lorem ipsum'/>
             </button>
         </div>
         <div class='titles' style='padding-top:10px;'>
@@ -284,11 +284,11 @@ $js = array(
                         <span class="markdown-icons" onclick="boldText()" title="Bold"><b>B</b></span>
                         <span class="markdown-icons" onclick="cursiveText()" title="Italic"><i>i</i></span>
                         <span class="markdown-icons" onclick="codeBlockText()" title="CodeBlock">&#10065;</span>
-                        <span class="markdown-icons" onclick="lists()" title="lists"><img src="../Shared/icons/list-symbol.svg"></span>
+                        <span class="markdown-icons" onclick="lists()" title="lists"><img src="../Shared/icons/list-symbol.svg" alt="Lorem ipsum"></span>
                         <span class="markdown-icons" onclick="linkYoutube()" title="link Youtube"><b>Yt</b></span>
                         <span class="markdown-icons" id="quoteIcon" onclick="quoteText()" title="quote">&#10078;</span>
-                        <span class="markdown-icons" id="linkIcon" onclick="linkText()" title="link"><img src="../Shared/icons/link-icon.svg"></span>
-                        <span class="markdown-icons" id="imgIcon" onclick="externalImg()" title="Img"><img src="../Shared/icons/insert-photo.svg"></span>
+                        <span class="markdown-icons" id="linkIcon" onclick="linkText()" title="link"><img src="../Shared/icons/link-icon.svg" alt="Lorem ipsum"></span>
+                        <span class="markdown-icons" id="imgIcon" onclick="externalImg()" title="Img"><img src="../Shared/icons/insert-photo.svg" alt="Lorem ipsum"></span>
                         <span class="markdown-icons headerType" id="headerIcon" title="Header">aA&#9663;</span>
 
                         <select name=";" onchange="chooseFile(this.options[this.selectedIndex].value);" >
@@ -384,7 +384,7 @@ $js = array(
             echo '
             <li onclick="showFilePopUp(\'EFILE\');">
             <a id="emptyFabBtn" class="btn-floating fab-btn-sm scale-transition scale-out" data-tooltip="Add Dummy Empty File">
-                <img id="emptyFabBtnImg" class="fab-icon" src="../Shared/icons/dummy_icon.svg">
+                <img id="emptyFabBtnImg" class="fab-icon" src="../Shared/icons/dummy_icon.svg" alt="Lorem ipsum">
             </a>
             </li>
             '; 
@@ -394,7 +394,7 @@ $js = array(
             echo '
             <li onclick="showFilePopUp(\'GFILE\');" >
             <a id="gFabBtn" class="btn-floating fab-btn-sm scale-transition scale-out" data-tooltip="Add Global File">
-                <img id="gFabBtnImg" class="fab-icon" src="../Shared/icons/global-icon.svg">
+                <img id="gFabBtnImg" class="fab-icon" src="../Shared/icons/global-icon.svg" alt="Lorem ipsum">
             </a>
             </li>
             ';
@@ -403,17 +403,17 @@ $js = array(
             echo '
             <li  onclick="showFilePopUp(\'LFILE\');" >
                 <a id="lFabBtn" class="btn-floating fab-btn-sm scale-transition scale-out" data-tooltip="Add Version Local File">
-                    <img id="lFabBtnImg" class="fab-icon" src="../Shared/icons/version_local-icon.svg">
+                    <img id="lFabBtnImg" class="fab-icon" src="../Shared/icons/version_local-icon.svg" alt="Lorem ipsum">
                 </a>
             </li>           
             <li onclick="showFilePopUp(\'MFILE\');" >
                 <a id="mFabBtn" class="btn-floating fab-btn-sm scale-transition scale-out" data-tooltip="Add Course Local File">
-                        <img id="mFabBtnImg" class="fab-icon" src="../Shared/icons/course_local-icon.svg">
+                        <img id="mFabBtnImg" class="fab-icon" src="../Shared/icons/course_local-icon.svg" alt="Lorem ipsum">
                 </a>
             </li>
             <li onclick="showLinkPopUp(\'LINK\');" >
                 <a id="linkFabBtn" class="btn-floating fab-btn-sm scale-transition scale-out noselect" data-tooltip="Add Link">
-                        <img id="linkFabBtnImg" class="fab-icon" src="../Shared/icons/link-icon.svg">
+                        <img id="linkFabBtnImg" class="fab-icon" src="../Shared/icons/link-icon.svg" alt="Lorem ipsum">
                 </a>
             </li>
             ';

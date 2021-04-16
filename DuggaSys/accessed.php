@@ -45,7 +45,7 @@
 				<input id='searchinputMobile' type='text' name='search' placeholder='Search..' onkeyup='searchterm=document.getElementById("searchinputMobile").value;searchKeyUp(event);myTable.reRender();document.getElementById("searchinput").value=document.getElementById("searchinputMobile").value;'/>
 
 				<button id='searchbuttonMobile' class='switchContent' onclick='searchterm=document.getElementById("searchinputMobile").value;searchKeyUp(event);myTable.reRender();' type='button'>
-					<img id='lookingGlassSVG' style='height:18px;' src='../Shared/icons/LookingGlass.svg'/>
+					<img id='lookingGlassSVG' style='height:18px;' src='../Shared/icons/LookingGlass.svg' alt='Lorem ipsum'/>
 				</button>
 			</div>
 		</div>
@@ -178,12 +178,12 @@
 		<ol class="fab-btn-list" style="margin: 0; padding: 0; display: none;" reversed>
 			<li onclick="showImportUsersPopup();" >
 							<a id="iFabBtn" class="btn-floating fab-btn-sm scale-transition scale-out" data-tooltip='Import user(s)'>
-									<img id="iFabBtnImg" class="fab-icon" src="../Shared/icons/importUser.svg">
+									<img id="iFabBtnImg" class="fab-icon" src="../Shared/icons/importUser.svg" alt="Lorem ipsum">
 							</a>
 					</li>
 	        <li onclick="showCreateUserPopup();">
 							<a id="cFabBtn" class="btn-floating fab-btn-sm scale-transition scale-out" data-tooltip='Create user'>
-									<img id="cFabBtnImg" class="fab-icon" src="../Shared/icons/createUser.svg">
+									<img id="cFabBtnImg" class="fab-icon" src="../Shared/icons/createUser.svg" alt="Lorem ipsum">
 							</a>
 					</li>
 		</ol>

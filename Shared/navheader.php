@@ -29,7 +29,7 @@
 				$_SESSION['coursevers'] = "UNK";
 	
 			// Always show home button which links to course homepage
-			echo "<td class='navButt' id='home' title='Home'><a id='homeIcon' class='navButt' href='../DuggaSys/courseed.php'><img src='../Shared/icons/Home.svg'></a></td>";
+			echo "<td class='navButt' id='home' title='Home'><a id='homeIcon' class='navButt' href='../DuggaSys/courseed.php'><img src='../Shared/icons/Home.svg' alt='Lorem ipsum'></a></td>";
 			// Generate different back buttons depending on which page is including
 			// this file navheader file. The switch case uses ternary operators to
 			// determine the href attribute value. (if(this) ? dothis : elsethis)
@@ -41,12 +41,12 @@
 				echo "<td class='menuButton' style='display: inline-block;'>";
 				echo "    <div class='access menuButton'>";
   				echo "      <a id='accessBTN' class='navButt' title='Visit the analytics page' value='Analytics' href='analytic.php'>";
-  				echo "        <img src='../Shared/icons/analytic.svg' style='margin: 8px; height: 30px;'>";
+  				echo "        <img src='../Shared/icons/analytic.svg' style='margin: 8px; height: 30px;' alt='Lorem ipsum'>";
 				echo "      </a>";
 				echo "    </div>";
 				echo "</td>";
 			} else if($requestedService == "analytic.php") {
-				echo '<td class="navButt" id="home" title="Back"><a id="upIcon" class="navButt internal-link" href="../DuggaSys/courseed.php"><img src="../Shared/icons/Up.svg"></a></td>';
+				echo '<td class="navButt" id="home" title="Back"><a id="upIcon" class="navButt internal-link" href="../DuggaSys/courseed.php"><img src="../Shared/icons/Up.svg" alt="Lorem ipsum"></a></td>';
                 echo '<td class="vl"></td>';
 				echo '<td class="navButt analytic-navbutton GS" id="GeneralStats"><a onclick="loadGeneralStats()"><i class="fas fa-stream"></i></a><span class="navcomment">General Stats</span></td>';
 				echo '<td class="navButt analytic-navbutton CO" id="CurrentlyOnline"><a onclick="loadCurrentlyOnline()"><i class="fas fa-users"></i></a><span class="navcomment">Currently Online</span></td>';
@@ -85,18 +85,18 @@
 			}
 			if($noup=='COURSE'){
 					echo "<a id='upIcon' class='navButt' href='../DuggaSys/courseed.php'>";
-					echo "<img src='../Shared/icons/Up.svg'></a></td>";
+					echo "<img src='../Shared/icons/Up.svg' alt='Lorem ipsum'></a></td>";
 			}if ($noup == 'COURSE' && checkLogin()) {
-					echo "<td class='navButt' id='announcement' title='Announcement'><img src='../Shared/icons/announcement_icon.svg'></td>";
+					echo "<td class='navButt' id='announcement' title='Announcement'><img src='../Shared/icons/announcement_icon.svg' alt='Lorem ipsum'></td>";
 
 			}if ($noup == 'COURSE' && checkLogin() && (isStudentUser($_SESSION['uid']))) {
-					echo "<td class='navButt' id='feedback' title='Recent Feedback'><img src='../Shared/icons/feedback_icon.svg'></td>";
+					echo "<td class='navButt' id='feedback' title='Recent Feedback'><img src='../Shared/icons/feedback_icon.svg' alt='Lorem ipsum'></td>";
 
 			}else if($noup=='SECTION'){
 					echo "<a id='upIcon' href='";
 					echo ($_SESSION['courseid'] != (string)"UNK" ? "../DuggaSys/sectioned.php?courseid=".$_SESSION['courseid']."&coursename=".$_SESSION['coursename']."&coursevers=".$_SESSION['coursevers'] : "../DuggaSys/courseed.php");
 					echo "'>";
-					echo "<img src='../Shared/icons/Up.svg'></a></td>";
+					echo "<img src='../Shared/icons/Up.svg' alt='Lorem ipsum'></a></td>";
 			}
 
 	
@@ -112,20 +112,20 @@
 						
 							echo "<td class='editVers' style='display: inline-block;margin-left:8px;'>";
 							echo "    <div class='editVers menuButton'>";
-              echo "      <img id='versionCog' class='navButt' title='Edit the selected version' onclick=showEditVersion(); src='../Shared/icons/CogwheelWhite.svg'>";
+              echo "      <img id='versionCog' class='navButt' title='Edit the selected version' onclick=showEditVersion(); src='../Shared/icons/CogwheelWhite.svg' alt='Lorem ipsum'>";
 							echo "    </div>";
 							echo "</td>";
 					if(checklogin() && (isSuperUser($_SESSION['uid']) )) {			
 							echo "<td class='newVers' style='display: inline-block;margin-right:16px;'>";
 							echo "    <div class='newVers menuButton'>";
-              echo "      <img id='versionPlus' value='New version' class='navButt' title='Create a new version of this course' onclick='showCreateVersion();' src='../Shared/icons/PlusS.svg'>";
+              echo "      <img id='versionPlus' value='New version' class='navButt' title='Create a new version of this course' onclick='showCreateVersion();' src='../Shared/icons/PlusS.svg' alt='Lorem ipsum'>";
 							echo "    </div>";
 							echo "</td>";						
 					}
 							echo "<td class='results' style='display: inline-block;'>";
 							echo "    <div class='results menuButton'>";
 							echo "    <a id='resultsBTN' title='Edit student results' value='Results' href='resulted.php?courseid=".$_SESSION['courseid']."&coursename=".$_SESSION['coursename']."&coursevers=".$_SESSION['coursevers']."' >";
-							echo "      <img id='versionPlus' class='navButt' src='../Shared/icons/marking_icon.svg'>";
+							echo "      <img id='versionPlus' class='navButt' src='../Shared/icons/marking_icon.svg' alt='Lorem ipsum'>";
 							echo "    </a>";
 							echo "    </div>";
 							echo "</td>";
@@ -133,7 +133,7 @@
 							echo "<td class='tests' style='display: inline-block;'>";
 							echo "    <div class='tests menuButton'>";
 							echo "      <a id='testsBTN' title='Show tests' value='Tests' href='duggaed.php?courseid=".$_SESSION['courseid']."&coursename=".$_SESSION['coursename']."&coursevers=".$_SESSION['coursevers']."' >";
-							echo "        <img id='testsBTN' class='navButt' src='../Shared/icons/test_icon.svg'>";
+							echo "        <img id='testsBTN' class='navButt' src='../Shared/icons/test_icon.svg' alt='Lorem ipsum'>";
 							echo "      </a>";
 							echo "    </div>";
 							echo "</td>";
@@ -141,7 +141,7 @@
 							echo "<td class='files' style='display: inline-block;'>";
 							echo "    <div class='files menuButton'>";
               echo "      <a id='filesBTN' title='Show files' value='Files' href='fileed.php?courseid=".$_SESSION['courseid']."&coursename=".$_SESSION['coursename']."&coursevers=".$_SESSION['coursevers']."' >";
-              echo "        <img class='navButt' src='../Shared/icons/files_icon.svg'>";
+              echo "        <img class='navButt' src='../Shared/icons/files_icon.svg' alt='Lorem ipsum'>";
 							echo "      </a>";
 							echo "    </div>";
 							echo "</td>";
@@ -173,7 +173,7 @@
 								echo "<td class='coursePage' style='display: inline-block;'>";
 								echo "    <div class='course menuButton'>";
 								echo " 		<a href='https://personal.his.se/utbildning/kurs/?semester=".$year.$term."&coursecode=".$result['coursecode']."'>";
-								echo "        <img id='courseIMG' value='Course' class='navButt' title='Course page for ".$result['coursecode']."' src='../Shared/icons/coursepage_button.svg'>";
+								echo "        <img id='courseIMG' value='Course' class='navButt' title='Course page for ".$result['coursecode']."' src='../Shared/icons/coursepage_button.svg' alt='Lorem ipsum'>";
 								echo "		</a>";
 								echo "    </div>";
 								echo "</td>";
@@ -182,7 +182,7 @@
 							echo "<td class='access menuButton' style='display: inline-block;'>";
 							echo "    <div class='access menuButton'>";
               echo "      <a id='accessBTN' title='Give students access to the selected version' value='Access' href='accessed.php?courseid=".$_SESSION['courseid']."&coursevers=".$_SESSION['coursevers']."' >";
-              echo "        <img class='navButt' src='../Shared/icons/lock_symbol.svg'>";
+              echo "        <img class='navButt' src='../Shared/icons/lock_symbol.svg' alt='Lorem ipsum'>";
 							echo "      </a>";
 							echo "    </div>";
 							echo "</td>";
@@ -221,7 +221,7 @@
 					else
 						echo   "<button id='searchbutton' class='switchContent' onclick='searchterm=document.getElementById(\"searchinput\").value;myTable.reRender();' type='button'>";
 
-					echo     "<img id='lookingGlassSVG' style='height:18px;' src='../Shared/icons/LookingGlass.svg'/>";
+					echo     "<img id='lookingGlassSVG' style='height:18px;' src='../Shared/icons/LookingGlass.svg' alt='Lorem ipsum'/>";
 					echo   "</button>";
 					echo "</td>";
 					if ($requestedService == "fileed.php" && (hasAccess($_SESSION["uid"], $_SESSION["courseid"], "w") || $_SESSION["superuser"] == 1)) {
@@ -229,7 +229,7 @@
 						echo "<td class='navButt'>";
 						echo "    <div>";
 						echo "      <a id='downloadBTN' title='Download all content in a zip file' target='_blank' value='Download' href='downloadzip.php?courseid=".$_SESSION['courseid']."&coursevers=".$_SESSION['coursevers']."' >";
-						echo "        <img class='navButt' src='../Shared/icons/Diskett.svg'>";
+						echo "        <img class='navButt' src='../Shared/icons/Diskett.svg' alt='Lorem ipsum'>";
 						echo "      </a>";
 						echo "    </div>";
 						echo "</td>";
@@ -239,7 +239,7 @@
       if($requestedService=="accessed.php" || $requestedService=="resulted.php" ){
 					echo "<td id='select' class='navButt' onmouseover='hoverc();' onmouseleave='leavec();'>";
 					echo   "<span id='filterButton'>";
-					echo     "<img class='navButt' src='../Shared/icons/filter_icon.svg'>";
+					echo     "<img class='navButt' src='../Shared/icons/filter_icon.svg' alt='Lorem ipsum'>";
 					echo     "<div id='dropdownc' class='dropdown-list-container' style='z-index: 1'>";
 					echo       "<div id='filterOptions'></div>"; 
 					echo       "<div id='columnfilter'></div>";
@@ -252,7 +252,7 @@
 	    if($requestedService=="resulted.php" ){
 					echo "<td id='sort' class='navButt' onmouseover='hovers();' onmouseleave='leaves();'>";
 					echo   "<span id='sortButton'>";
-					echo     "<img class='navButt' src='../Shared/icons/sort_white.svg'>";
+					echo     "<img class='navButt' src='../Shared/icons/sort_white.svg' alt='Lorem ipsum'>";
 					echo     "<div id='dropdowns' class='dropdown-list-container' style='z-index: 1'>";
 					echo     "</div>";
 					echo   "</span>";
@@ -264,16 +264,16 @@
 	
 			// Either generate code viewer specific nav menu or a spacer
 			if(isset($codeviewer)){
-					echo "<td class='navButt' id='beforebutton' title='Previous example' onmousedown='Skip(\"bd\");' onmouseup='Skip(\"bu\");' onclick='Skip(\"b\");'><img src='../Shared/icons/backward_button.svg'></td>";
-					echo "<td class='navButt' id='afterbutton' title='Next example' onmousedown='Skip(\"fd\");' onmouseup='Skip(\"fu\");' onclick='Skip(\"f\");'><img src='../Shared/icons/forward_button.svg' /></td>";
-					echo "<td class='navButt' id='playbutton' title='Open demo' onclick='Play(event);'><img src='../Shared/icons/play_button.svg' /></td>";
+					echo "<td class='navButt' id='beforebutton' title='Previous example' onmousedown='Skip(\"bd\");' onmouseup='Skip(\"bu\");' onclick='Skip(\"b\");'><img src='../Shared/icons/backward_button.svg' alt='Lorem ipsum'></td>";
+					echo "<td class='navButt' id='afterbutton' title='Next example' onmousedown='Skip(\"fd\");' onmouseup='Skip(\"fu\");' onclick='Skip(\"f\");'><img src='../Shared/icons/forward_button.svg' alt='Lorem ipsum' /></td>";
+					echo "<td class='navButt' id='playbutton' title='Open demo' onclick='Play(event);'><img src='../Shared/icons/play_button.svg' alt='Lorem ipsum' /></td>";
 					if(checklogin() && (isSuperUser($_SESSION['uid']) || hasAccess($_SESSION['uid'], $_SESSION['courseid'], 'st') || hasAccess($_SESSION['uid'], $_SESSION['courseid'], 'sv'))) {
-						echo "<td class='navButt' id='templatebutton' title='Choose Template' onclick='openTemplateWindow();'><img src='../Shared/icons/choose_template.svg'  /></td>";
-						echo "<td class='navButt' onclick='displayEditExample();' title='Example Settings' ><img src='../Shared/icons/general_settings_button.svg' /></td>";
-					  echo "<td class='navButt' id='fileedButton' onclick='' style='display:none;' title='File Download/Upload' ><img src='../Shared/icons/files_icon.svg' /></td>";
+						echo "<td class='navButt' id='templatebutton' title='Choose Template' onclick='openTemplateWindow();'><img src='../Shared/icons/choose_template.svg' alt='Lorem ipsum' /></td>";
+						echo "<td class='navButt' onclick='displayEditExample();' title='Example Settings' ><img src='../Shared/icons/general_settings_button.svg' alt='Lorem ipsum' /></td>";
+					  echo "<td class='navButt' id='fileedButton' onclick='' style='display:none;' title='File Download/Upload' ><img src='../Shared/icons/files_icon.svg' alt='Lorem ipsum' /></td>";
 					}
-					echo "<td class='navButt' id='codeBurger' onclick='showBurgerMenu();' title='Show box' ><img src='../Shared/icons/hotdog_button.svg' /></td>";
-					echo "<td class='navButt showmobile' style='display:none;'><a href='courseed.php'><img src='../Shared/icons/hotdog_button.svg'></a></td>";
+					echo "<td class='navButt' id='codeBurger' onclick='showBurgerMenu();' title='Show box' ><img src='../Shared/icons/hotdog_button.svg' alt='Lorem ipsum' /></td>";
+					echo "<td class='navButt showmobile' style='display:none;'><a href='courseed.php'><img src='../Shared/icons/hotdog_button.svg' alt='Lorem ipsum'></a></td>";
 					echo "<td id='navHeading' class='navHeading codeheader'>";
 					echo "<span id='exampleSection'>Example Section : </span>";
 					echo "<span id='exampleName'> Example Name</span>";
@@ -283,7 +283,7 @@
 					
 					echo "<td id='select' style='display:none;' class='navButt'  onmouseover='hoverc();' onmouseleave='leavec();'>";
 					echo   "<span>";
-					echo     "<img class='navButt' src='../Shared/icons/tratt_white.svg'>";
+					echo     "<img class='navButt' src='../Shared/icons/tratt_white.svg' alt='Lorem ipsum'>";
 					echo     "<div id='dropdownc' class='dropdown-list-container' style='z-index: 1'>";
 					echo     "<div id='filterOptions'></div>";
 					echo     "</div>";
@@ -291,7 +291,7 @@
 					echo "</td>";
 					echo "<td id='sort' style='display:none' class='navButt' onmouseover='hovers();' onmouseleave='leaves();'>";
 					echo   "<span>";
-					echo     "<img class='navButt' src='../Shared/icons/sort_white.svg'>";
+					echo     "<img class='navButt' src='../Shared/icons/sort_white.svg' alt='Lorem ipsum'>";
 					echo     "<div id='dropdowns' class='dropdown-list-container' style='z-index: 1'>";
 					echo     "</div>";
 					echo   "</span>";
@@ -302,10 +302,10 @@
 	
 			if(checklogin()) {
 				echo "<td class='navName'><a id='userName' href='profile.php' title='".$_SESSION['loginname']."&#39;s profile'>".$_SESSION['loginname']."</a></td>";
-				echo "<td id='loginbutton' class='loggedin'><img id='loginbuttonIcon' src='../Shared/icons/logout_button.svg' title='Logout'/></td>";
+				echo "<td id='loginbutton' class='loggedin'><img id='loginbuttonIcon' src='../Shared/icons/logout_button.svg' title='Logout' alt='Lorem ipsum'/></td>";
 			}else{
 				echo "<td class='navName'><label id='userName' title='Login to view your profile'>Guest</label></td>";
-				echo "<td id='loginbutton' class='loggedout'><img id='loginbuttonIcon' src='../Shared/icons/login_button.svg' title='Login'/></td>";
+				echo "<td id='loginbutton' class='loggedout'><img id='loginbuttonIcon' src='../Shared/icons/login_button.svg' title='Login' alt='Lorem ipsum'/></td>";
 			}
 
 			echo "</tr></table>";
@@ -344,6 +344,7 @@ function mouseOverHome() {
    {
       var images = obj.getElementsByTagName('img');
       images[0].src = '../Shared/icons/HomeShadow.svg';
+	  images[0].alt = 'Lorem ipsum';
    }
 }
 
@@ -353,6 +354,7 @@ function mouseOutHome() {
    {
       var images = obj.getElementsByTagName('img');
       images[0].src = '../Shared/icons/Home.svg';
+	  images[0].alt = 'Lorem ipsum';
    }
 }
 /*Shadow hover effect for home button END -------------*/
@@ -371,6 +373,7 @@ function mouseOverUp() {
    {
       var images = obj.getElementsByTagName('img');
       images[0].src = '../Shared/icons/UpShadow.svg';
+	  images[0].alt = 'Lorem ipsum';
    }
 }
 
@@ -380,6 +383,7 @@ function mouseOutUp() {
    {
       var images = obj.getElementsByTagName('img');
       images[0].src = '../Shared/icons/Up.svg';
+	  images[0].alt = 'Lorem ipsum';
    }
 }
 
@@ -399,6 +403,7 @@ function mouseOverFilter() {
    {
       var images = obj.getElementsByTagName('img');
       images[0].src = '../Shared/icons/filter_iconShadow.svg';
+	  images[0].alt = 'Lorem ipsum';
    }
 }
 
@@ -408,6 +413,7 @@ function mouseOutFilter() {
    {
       var images = obj.getElementsByTagName('img');
       images[0].src = '../Shared/icons/filter_icon.svg';
+	  images[0].alt = 'Lorem ipsum';
    }
 }
 /*Shadow hover effect for filter button END -------------*/
@@ -425,6 +431,7 @@ function mouseOverSort() {
    {
       var images = obj.getElementsByTagName('img');
       images[0].src = '../Shared/icons/sort_whiteShadow.svg';
+	  images[0].alt = 'Lorem ipsum';
    }
 }
 
@@ -434,6 +441,7 @@ function mouseOutSort() {
    {
       var images = obj.getElementsByTagName('img');
       images[0].src = '../Shared/icons/sort_white.svg';
+	  images[0].alt = 'Lorem ipsum';
    }
 }
 /*Shadow hover effect for sort button END -------------*/
@@ -451,6 +459,7 @@ function mouseOverAnnouncement() {
    {
       var images = obj.getElementsByTagName('img');
       images[0].src = '../Shared/icons/announcement_iconShadow.svg';
+	  images[0].alt = 'Lorem ipsum';
    }
 }
 
@@ -460,6 +469,7 @@ function mouseOutAnnouncement() {
    {
       var images = obj.getElementsByTagName('img');
       images[0].src = '../Shared/icons/announcement_icon.svg';
+	  images[0].alt = 'Lorem ipsum';
    }
 }
 /*Shadow hover effect for announcement button END -------------*/
@@ -477,6 +487,7 @@ function mouseOverFeedback() {
    {
       var images = obj.getElementsByTagName('img');
       images[0].src = '../Shared/icons/feedback_iconShadow.svg';
+	  images[0].alt = 'Lorem ipsum';
    }
 }
 
@@ -486,6 +497,7 @@ function mouseOutFeedback() {
    {
       var images = obj.getElementsByTagName('img');
       images[0].src = '../Shared/icons/feedback_icon.svg';
+	  images[0].alt = 'Lorem ipsum';
    }
 }
 

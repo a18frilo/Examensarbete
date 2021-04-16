@@ -52,13 +52,13 @@ foreach ($pdo->query('SELECT userAnswer.aid, userAnswer.moment, userAnswer.grade
   }
   if($grade != null  || $grade != 0){
     if ($grade == 2) {
-    	 $duggaFeedback .="<div class='listentries'><span><img src='../Shared/icons/complete.svg'></span>";
+    	 $duggaFeedback .="<div class='listentries'><span><img src='../Shared/icons/complete.svg' alt='Lorem ipsum'></span>";
     	 $duggaFeedback .="<span class='entryname'><b>".$entryname."</b></span></div>";
     	 $duggaFeedback .="<div class='markedDate markedPassMobile'><p>Pass: ".$markedDateMobile."</p></div>";
        $duggaFeedback .="<div class='markedDate markedPass'><p>Dugga marked as pass: ".$markedDate."</p></div>";
 
     }else if($grade == 1){
-    	 $duggaFeedback .="<div class='listentries'><span><img src='../Shared/icons/uncomplete.svg'></span>";
+    	 $duggaFeedback .="<div class='listentries'><span><img src='../Shared/icons/uncomplete.svg' alt='Lorem ipsum'></span>";
     	 $duggaFeedback .="<span class='entryname'><b>".$entryname."</b></span></div>";
     	 $duggaFeedback .="<div class='markedDate markedFailMobile'><p>Fail: ".$markedDateMobile."</p></div>";
        $duggaFeedback .="<div class='markedDate markedFail '><p>Dugga marked as fail: ".$markedDate."</p></div>";

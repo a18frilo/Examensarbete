@@ -59,11 +59,11 @@ else{
 	?>
 
 	<!-- content START -->
-	<div id="content">
+	<main id="content">
 		<!-- Section List -->
 		<div id='Courselist'>
 		</div>
-	</div>
+	</main>
 
 	<!-- version identification -->
 	<div id="version" class='version' style='display:none'>Master hash <br /><?php echo $version ?></div>

@@ -1326,17 +1326,21 @@ function loginButtonHover(status) {
 	if(status == "online"){
 		document.getElementById("loginbutton").addEventListener("mouseover", function() {
 			document.getElementById("loginbuttonIcon").src="../Shared/icons/logout_button.svg";
+			document.getElementById("loginbuttonIcon").alt="Lorem ipsum";
 		}, false);
 		document.getElementById("loginbutton").addEventListener("mouseout", function() {
 			document.getElementById("loginbuttonIcon").src="../Shared/icons/Man.svg";
+			document.getElementById("loginbuttonIcon").alt="Lorem ipsum";
 		}, false);
 	}
 	if(status == "offline"){
 		document.getElementById("loginbutton").addEventListener("mouseover", function() {
 			document.getElementById("loginbuttonIcon").src="../Shared/icons/login_button.svg";
+			document.getElementById("loginbuttonIcon").alt="Lorem ipsum";
 		}, false);
 		document.getElementById("loginbutton").addEventListener("mouseout", function() {
 			document.getElementById("loginbuttonIcon").src="../Shared/icons/Man.svg";
+			document.getElementById("loginbuttonIcon").alt="Lorem ipsum";
 		}, false);
 	}
 }

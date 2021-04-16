@@ -72,7 +72,7 @@ function newRow() {
 		inputValue = document.getElementById("tsComment_"+idx).value;
 		str += "<td class='tsCommentColumn'><input id='tsComment_"+idx+"' required type='text' name='tsComment_"+idx+"' style='width: 90%' value='"+inputValue+"' /></td>";
 		if (idx > 0) {
-			str += "<td class='tsTableDeleteCell' onclick='deleteRow("+idx+")'><img src='../Shared/icons/Trashcan.svg'></td>";
+			str += "<td class='tsTableDeleteCell' onclick='deleteRow("+idx+")'><img src='../Shared/icons/Trashcan.svg' alt='Lorem ipsum'></td>";
 		}
 	}
 	str += "<tr class='tsInputRow' id=tsTableRow_"+lastRowIdx+"><td>";
@@ -82,7 +82,7 @@ function newRow() {
 	str += "</select></td>";
 	str += "<td><input id='tsRef_"+lastRowIdx+"' required type='number' name='tsRef_"+lastRowIdx+"' style='width: 55px' /></td>";
 	str += "<td class='tsCommentColumn'><input id='tsComment_"+lastRowIdx+"' required type='text' name='tsComment_"+lastRowIdx+"' style='width: 90%' /></td>";
-	str += "<td class='tsTableDeleteCell' onclick='deleteRow("+lastRowIdx+")'><img src='../Shared/icons/Trashcan.svg' alt='Lorem ipsum' alt='Lorem ipsum'></td>";
+	str += "<td class='tsTableDeleteCell' onclick='deleteRow("+lastRowIdx+")'><img src='../Shared/icons/Trashcan.svg' alt='Lorem ipsum'></td>";
 
 	tsTableBody.innerHTML = str;
 }

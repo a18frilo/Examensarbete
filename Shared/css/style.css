@@ -181,9 +181,15 @@ hr {
 }
 
 .hidden {
-  opacity: 0.7;
+  /* opacity: 0.7; */
   /* border-radius:4px; */
+  color: #000 !important;
   margin-left: 16px;
+}
+
+.course-menu {
+  display: flex;
+  flex-direction: row;
 }
 
 p {

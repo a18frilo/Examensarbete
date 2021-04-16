@@ -133,7 +133,7 @@
 							echo "<td class='tests' style='display: inline-block;'>";
 							echo "    <div class='tests menuButton'>";
 							echo "      <a id='testsBTN' title='Show tests' value='Tests' href='duggaed.php?courseid=".$_SESSION['courseid']."&coursename=".$_SESSION['coursename']."&coursevers=".$_SESSION['coursevers']."' >";
-							echo "        <img id='testsBTN' class='navButt' src='../Shared/icons/test_icon.svg' alt='Lorem ipsum'>";
+							echo "        <img id='testsBTNimg' class='navButt' src='../Shared/icons/test_icon.svg' alt='Lorem ipsum'>";
 							echo "      </a>";
 							echo "    </div>";
 							echo "</td>";

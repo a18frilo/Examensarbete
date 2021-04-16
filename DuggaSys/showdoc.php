@@ -472,7 +472,7 @@
             $temp = explode('.', $filename);
             $ext  = array_pop($temp);
             $name = implode('.', $temp);
-						echo "<html>";
+						echo "<html lang='sv'>";
 						echo "<head>";
 						echo "<link rel='icon' type='image/ico' href='../Shared/icons/favicon.ico'/>";
 						echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>";

@@ -108,7 +108,7 @@ if($zip	->	open($zipcreated,	ZipArchive::CREATE	)	===	TRUE){
 }
 
 ?>
-<html>
+<html lang="sv">
 <head>
 </head>
 <body>

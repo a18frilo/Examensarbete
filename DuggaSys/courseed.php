@@ -36,7 +36,7 @@ else{
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
 	<link rel="icon" type="image/ico" href="../Shared/icons/favicon.ico"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
@@ -90,7 +90,7 @@ else{
     			<div class="cursorPointer" onclick='closeWindows();' title='Close window'>x</div>
     		</div>
     		<div style='padding:5px;'>
-    			<input type='hidden' id='cid' value='Toddler' />
+    			<input type='hidden' id='cid-course' value='Toddler' />
     			<div class='inputwrapper'>
 					<span>Course Name:</span>
 					<input oninput="elementIsValid(this);" class='textinput validate' type='text' id='ncoursename' name='coursename' placeholder='Course Name' />
@@ -117,7 +117,7 @@ else{
     			<div class="cursorPointer" onclick='closeWindows();'>x</div>
     		</div>
     		<div style='padding:5px;'>
-    			<input type='hidden' id='cid' value='Toddler' />
+    			<input type='hidden' id='cid-edit' value='Toddler' />
     			<div class='inputwrapper'>
 					<span>Course Name:</span>
 					<input oninput="elementIsValid(this);" class='textinput validate' type='text' id='coursename' name='coursename' placeholder='Course Name' />

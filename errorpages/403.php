@@ -13,7 +13,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 $startURL = str_replace("errorpages/403.php","", $actual_link) . "DuggaSys/courseed.php";
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
 	<link rel="icon" type="image/ico" href="../Shared/icons/favicon.ico"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">

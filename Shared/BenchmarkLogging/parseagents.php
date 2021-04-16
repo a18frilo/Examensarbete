@@ -1,4 +1,4 @@
-<html>
+<html lang="sv">
 	<body>
 		<table border="1">
 <?php

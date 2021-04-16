@@ -28,7 +28,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 
 <head>
 	<link rel="icon" type="image/ico" href="../Shared/icons/favicon.ico"/>
@@ -346,7 +346,7 @@
 				<div class='cursorPointer' onclick='closeWindows();'>x</div>
 			</div>
 			<div style='padding:5px;'>
-				<input type='hidden' id='cid' value='Toddler' />
+				<input type='hidden' id='cid-section' value='Toddler' />
 				<div class='inputwrapper'><span>Version ID:</span><input class="greyedout-textinput" disabled type='text' id='eversid' placeholder='Version ID' /></div>
 				<div class='inputwrapper'><span>Version Name:</span><input onkeyup="validateVersionName('eversname', 'dialog5')" class='textinput' type='text' id='eversname' placeholder='Version Name'/></div>
 				<p id="dialog5" style="font-size:11px; border:0px; margin-left: 10px; display:none;">Must be in of the form HTNN, VTNN or STNN</p>

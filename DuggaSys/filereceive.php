@@ -424,7 +424,7 @@ if (!$error) {
 }*/
 echo "<meta http-equiv='refresh' content='0;URL=fileed.php?courseid=" . $cid . "&coursevers=" . $vers . "' />";  //update page, redirect to "fileed.php" with the variables sent for course id and version id;
 ?>
-<html>
+<html lang="sv">
 <head>
 </head>
 <body>

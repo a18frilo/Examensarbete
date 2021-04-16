@@ -1729,7 +1729,7 @@ function rendercode(codestring, boxid, wordlistid, boxfilename) {
 				// This statement checks the character after < to make sure it is a valid tag.
                                 coloringcode = tokens[i].val + "" + tokens[i + 1].val+"" + tokens[i + 2].val;
 				switch(coloringcode) {
-					case "<html>":
+					case "<html lang='sv'>":
 					case "</html":
 						fontcolor = "red";
 						break;

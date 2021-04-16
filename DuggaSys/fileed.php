@@ -33,7 +33,7 @@ $js = array(
 
 
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/ico" href="../Shared/icons/favicon.ico"/>

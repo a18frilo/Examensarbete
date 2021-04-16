@@ -128,7 +128,7 @@ logServiceEvent($log_uuid, EventTypes::ServiceServerEnd, "filerecieve_preview.ph
 
 
 ?>
-<html>
+<html lang="sv">
 <head>
 </head>
 <body>

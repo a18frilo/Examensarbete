@@ -392,6 +392,8 @@ function returnedCourse(data)
 				textStyle += "login";
 			} else if (parseInt(item['visibility']) == 3) {
 				textStyle += "deleted"
+			} else if (parseInt(item['visibility']) && !item['registered']) {
+				textStyle += "hidden";
 			}
 
 			var courseString = item['coursename'];
@@ -419,7 +421,7 @@ function returnedCourse(data)
 				if(item['registered'] == true || uname=="Guest") {
           			str += "<span style='margin-right:15px;'><a class='" + textStyle + "' href='sectioned.php?courseid=" + item['cid'] + "&coursename=" + item['coursename'] + "&coursevers=" + item['activeversion'] + "' title='\"" + item['coursename'] + "\" [" + item['coursecode'] + "]'>" + item['coursename'] + "</a></span>";
         		}else{
-          			str += "<span style='margin-right:15px;opacity:0.3'><a class='" + textStyle + "' href='sectioned.php?courseid=" + item['cid'] + "&coursename=" + item['coursename'] + "&coursevers=" + item['activeversion'] + "' title='\"" + item['coursename'] + "\" [" + item['coursecode']+ "] '>" + item['coursename'] + "</a></span>";
+          			str += "<span style='margin-right:15px;'><a class='" + textStyle + "' href='sectioned.php?courseid=" + item['cid'] + "&coursename=" + item['coursename'] + "&coursevers=" + item['activeversion'] + "' title='\"" + item['coursename'] + "\" [" + item['coursecode']+ "] '>" + item['coursename'] + " (Oregistrerad)</a></span>";
         		}
         		str += "</div>";
 			}
